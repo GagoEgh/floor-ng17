@@ -1,0 +1,25 @@
+<div class="container header-bar">
+    <div class="catalog">
+        <a class="burger-txt" routerLink="katalog">
+            <img src='{{burger}}' class="catalog-burger">
+            Каталог
+        </a>
+    </div>
+    <ul class="navigation">
+        @for(root of href(); track root.href){
+            <a [routerLink]="root.href">{{root.title}}</a>
+        }@empty{
+            <span>The collection is empty</span>
+        }
+    </ul>
+
+    <div class="resurces">
+        <div class="img-block">
+            <img src='{{login}}' class="resurces-img">
+        </div>
+        <img src='{{star}}' class="resurces-img-star">
+        <div class="img-block">
+            <img src='{{shoping}}' class="resurces-img">
+        </div>
+    </div>
+</div>

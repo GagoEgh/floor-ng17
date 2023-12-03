@@ -1,0 +1,97 @@
+@import '../../../../assets/scss/variable.scss';
+
+.header{
+    display: none;
+    @media (max-width:724px){
+    padding: 5px;
+    background: var(--gray, #E4E4E4);
+    display: flex;
+    justify-content: space-between;
+
+    .block{
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        .logo{
+            width: 80px;
+            height: 30px;
+        }
+
+        .icons{
+ 
+            width: 220px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .icon{
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        
+    }
+
+
+   .block-burger{
+    background: var(--gold, #C68F4E);
+    position: relative;
+    width: 50px;
+    height: 50px;
+    .burger{
+        width: 25px;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        left: 27%;
+        top: 55%;
+
+        &::after{
+            content: '';
+            display: block;
+            position: relative;
+            left: 0;
+            top: -6px;
+            width: 25px;
+            height: 2px;
+            background-color: white;
+        }
+
+        &::before{
+            content: '';
+            display: block;
+            position: relative;
+            left: 0;
+            top: -8px;
+            width: 25px;
+            height: 2px;
+            background-color: white;
+        }
+    }
+   }
+    }
+
+    @media (max-width:426px){
+        .block{
+            gap:46px;
+
+            .icons{
+                width: 160px;
+            }
+        }
+    }
+
+    @media (max-width:321px){
+        .block{
+            gap:10px;
+        }
+    }
+}
+.border{
+    border-top: 1px solid $titaniumWhite;
+    border-bottom: 1px solid $titaniumWhite;
+
+    @media (max-width:724px){
+        display: none;
+    }
+}

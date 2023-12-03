@@ -1,0 +1,69 @@
+@import '../scss/variable.scss';
+@mixin location-font($px,$weight){
+    color: $colorGray;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-size: $px;
+    font-weight: $weight;
+}
+
+@mixin flex($height){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $height;
+}
+
+@mixin imgStyle($width,$height,$url){
+    width: $width;
+    height: $height;
+    display: flex;
+    background-image: url($url);
+    background-position: center;
+    background-size: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin flex-column($gap){
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+@mixin flex-center($color,$bg,$width,$hg){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:24px;
+    width:$width;
+    height:$hg; 
+    font-size: 20px;
+    font-weight: 500;
+    color:$color;
+    background:$bg;
+}
+
+@mixin fontStyle($color,$size,$weight){
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin after($width){
+    content: '';
+    display: block;
+    position: relative;
+    width: $width;
+    height: 2px;
+    background: #C68F4E;
+    top: 15px;
+    left: -69px;
+    
+}
+
+@mixin titleStyle(){
+    color: var(--heading-color, #202020);
+    font-size: 50px;
+    font-weight: 700;
+    padding-bottom: 50px;
+}

@@ -1,0 +1,50 @@
+<footer class="footer">
+    <div class="container">
+        <nav class="nav">
+            <div class="left-nav">
+                <div class="logo">
+                    <img src="/assets/imgs/footer/footer-logo.png" class="footer-logo">
+                    <img src="/assets/imgs/footer/text13.png" class="img-text">
+                </div>
+                <div class="address">
+                    <p class="text">Москва, Электродная улица, д. 2 стр. 34</p>
+                    <p class="text">Часы работы: пн-пт, 9:00-18:00</p>
+                </div>
+            </div>
+            <div class="top-nav">
+                <ul>
+                    @for(item of topMenu(); track item){
+                        <li class="menu-li">
+                            <a [routerLink]="" class="menu-a">{{item}}</a>
+                        </li>
+                    }
+                </ul>
+                <ul class="navigation">
+                    @for(root of href(); track root.href){
+                        <li>
+                            <a [routerLink]="root.href">{{root.title}}</a>
+                        </li>
+                    }@empty{
+                        <span>The collection is empty</span>
+                    }
+                </ul>
+            </div>
+            <div class="raight-nav">
+                <button class="btn"> Заказать обратный звонок</button>
+                <p>8(800) 775-10-92</p>    
+                <p >info&#64;zfloor.ru</p>
+            </div>
+
+        </nav>
+        <div class="bottom-footer">
+            <p class="floor">© Zfloor 2015-2021</p>
+            <div class="cards">
+                <img class="card" src="/assets/imgs/footer/Visa__logo.png" alt="">
+                <img class="card master" src="/assets/imgs/footer/Mastercard-logo.png" alt="">
+                <img class="card" src="/assets/imgs/footer/Mir-logo.png" alt="">
+            </div>
+            <p>Политика конфиденциальности</p>
+        </div>
+    </div>
+</footer>
+
