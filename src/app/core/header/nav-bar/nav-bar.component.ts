@@ -1,4 +1,4 @@
-import { Component, WritableSignal, inject, } from '@angular/core';
+import { Component, Signal, inject, } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Href } from '../../../types/href.interface';
 import { MenuService } from '../../services/menu.service';
@@ -15,16 +15,16 @@ import { MenuService } from '../../services/menu.service';
 })
 export class NavBarComponent  {
 
-
   menuService = inject(MenuService);
+  href: Signal<Href[] | undefined>;
   burger = "/assets/imgs/header/burger.png";
   login = "/assets/imgs/header/login.png";
   star = "/assets/imgs/header/star.png";
   shoping = "/assets/imgs/header/shopping.png";
-  href!: WritableSignal<Href[]>;
 
+  
   constructor() {
-    this.href = this.menuService.getHref()
+    this.href = this.menuService.getHrefSignal()
   }
 
 }

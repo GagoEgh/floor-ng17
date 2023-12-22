@@ -1,7 +1,8 @@
-import { Component, WritableSignal, inject } from '@angular/core';
+import { Component, Signal, inject } from '@angular/core';
 import { Href } from '../../../types/href.interface';
-import { MenuService } from '../../services/menu.service';
 import { RouterModule } from '@angular/router';
+import { MenuService } from '../../services/menu.service';
+
 
 @Component({
   selector: 'app-footer',
@@ -13,13 +14,13 @@ import { RouterModule } from '@angular/router';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  
   menuService = inject(MenuService);
-  topMenu!: WritableSignal<string[]>
-  href!: WritableSignal<Href[]>;
+  topMenu: Signal<string[] | undefined>;
+  href: Signal<Href[] | undefined>;
 
   constructor() {
-    this.href = this.menuService.getHref();
-    this.topMenu = this.menuService.getTopMenu()
+    this.menuService.dispatch();
+    this.topMenu = this.menuService.topMenuSignal()
+    this.href = this.menuService.getHrefSignal();
   }
 }
