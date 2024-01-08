@@ -1,19 +1,23 @@
-<div class="header">
-    <div class="block">
-        <img src='{{logo}}' class="logo">
-        <div class="icons">
-            <img src='{{search}}' class="icon">
-            <img src='{{star}}' class="icon">
-            <img src='{{shoping}}' class="icon">
-            <img src='{{login}}' class="icon">
+
+<header>
+    <div class="header-phone">
+        <div class="block">
+            <img src='{{logo}}' class="logo">
+            <div class="icons">
+                <img src='{{search}}' class="icon">
+                <img src='{{star}}' class="icon">
+                <img src='{{shoping}}' class="icon">
+                <img src='{{login}}' class="icon">
+            </div>
+        </div>
+        <div class="block-burger">
+            <div class="burger"></div>
         </div>
     </div>
-    <div class="block-burger">
-        <div class="burger"></div>
+    <app-header-contacts></app-header-contacts>
+    <div class="border">
+        <app-nav-bar></app-nav-bar>
     </div>
-</div>
-<app-header-contacts></app-header-contacts>
-<div class="border">
-    <app-nav-bar></app-nav-bar>
-</div>
-<router-outlet></router-outlet>
+    <router-outlet></router-outlet>
+</header>
+

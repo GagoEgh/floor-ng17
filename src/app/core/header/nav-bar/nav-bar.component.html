@@ -1,4 +1,4 @@
-<div class="container header-bar">
+<nav class="container header-bar">
     <div class="catalog">
         <a class="burger-txt" routerLink="katalog">
             <img src='{{burger}}' class="catalog-burger">
@@ -12,14 +12,13 @@
             <span>The collection is empty</span>
         }
     </ul>
-
     <div class="resurces">
         <div class="img-block">
-            <img src='{{login}}' class="resurces-img">
-        </div>
-        <img src='{{star}}' class="resurces-img-star">
-        <div class="img-block">
-            <img src='{{shoping}}' class="resurces-img">
+            @for(img of imgs(); track img){
+                <img [src]='img' class="resurces-img">
+            }@empty{
+                <span>The collection is empty</span>
+            }
         </div>
     </div>
-</div>
+</nav>

@@ -1,0 +1,30 @@
+[
+    {
+        "href": "company",
+        "title": "О компании"
+    },
+    {
+        "href": "services",
+        "title": "Сервисы"
+    },
+    {
+        "href": "projects",
+        "title": "Проекты"
+    },
+    {
+        "href": "promotions",
+        "title": "Акции"
+    },
+    {
+        "href": "news",
+        "title": "Новости"
+    },
+    {
+        "href": "contacts",
+        "title": "Контакты"
+    },
+    {
+        "href": "reviews",
+        "title": "Отзывы"
+    }
+]

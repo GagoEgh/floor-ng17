@@ -1,0 +1,81 @@
+<div class="flooring">
+    <div class="flooring-sel">
+        <div class="sel-text">
+            <div class="span-block">
+                <span class="text1">Быстрый подбор покрытия</span>
+                <span class="text2">Шаг 1 из 6</span>
+            </div>
+            <div class="info">
+                <h1 class="title">Выберите вид напольного покрытия</h1>
+                <p class="par">Различные виды напольных покрытый</p>
+            </div>
+        </div>
+
+        <div class="sel-btns">
+            <div class="back">
+                <img class="back-img" [src]='leftVector'>
+                <p>Назад</p>
+            </div>
+            <div class="next">
+                <p>Далее</p>
+                <img class="back-img" [src]='rightVector'>
+            </div>
+        </div>
+    </div>
+    <div class="sel-imgs">
+        <div class="top-imgs">
+            <div class="block">
+                <div class="img-block floor-img">
+                    <img [src]="dots" class="floor-img">
+                </div>
+                <div>
+                    <label class="form-control">
+                        <input type="radio" class="block-input" name="floor">
+                        <span>
+                            Ковролин
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="block">
+                <img [src]="kovr" class="kovr-img floor-img">
+                <div>
+                    <label class="form-control">
+                        <input type="radio" class="block-input" name="floor">
+                        <span>Ковровая плитка</span>
+                    </label>
+                </div>
+            </div>
+            <div class="block">
+                <img [src]="linoleum" class="floor-img">
+                <div>
+                    <label class="form-control">
+                        <input type="radio" class="block-input" name="floor">
+                        <span>Линолеум</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="botom-imgs">
+            <div class="block">
+                <img [src]="pvh" class="floor-img">
+                <div>
+                    <label class="form-control">
+                        <input type="radio" class="block-input" name="floor">
+                        <span>Дизайн-плитка ПВХ</span>
+                    </label>
+                </div>
+            </div>
+            <div class="block">
+                <img [src]="laminat" class="laminat-img floor-img">
+                <div>
+                    <label class="form-control">
+                        <input type="radio" class="block-input" name="floor">
+                        <span>Ламинат</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

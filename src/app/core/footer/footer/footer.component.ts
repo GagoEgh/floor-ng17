@@ -17,10 +17,12 @@ export class FooterComponent {
   menuService = inject(MenuService);
   topMenu: Signal<string[] | undefined>;
   href: Signal<Href[] | undefined>;
-
+  puyCards!: Signal<string[] | undefined>;
+  
   constructor() {
     this.menuService.dispatch();
     this.topMenu = this.menuService.topMenuSignal()
     this.href = this.menuService.getHrefSignal();
+    this.puyCards = this.menuService.getPuyCardsSignal()
   }
 }

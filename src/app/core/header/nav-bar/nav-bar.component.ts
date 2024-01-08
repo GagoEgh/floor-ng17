@@ -17,14 +17,12 @@ export class NavBarComponent  {
 
   menuService = inject(MenuService);
   href: Signal<Href[] | undefined>;
+  imgs:Signal<string[] | undefined>;
   burger = "/assets/imgs/header/burger.png";
-  login = "/assets/imgs/header/login.png";
-  star = "/assets/imgs/header/star.png";
-  shoping = "/assets/imgs/header/shopping.png";
-
   
   constructor() {
-    this.href = this.menuService.getHrefSignal()
+    this.href = this.menuService.getHrefSignal();
+    this.imgs = this.menuService.getImgsSignal()
   }
 
 }

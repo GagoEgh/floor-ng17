@@ -39,9 +39,12 @@
         <div class="bottom-footer">
             <p class="floor">© Zfloor 2015-2021</p>
             <div class="cards">
-                <img class="card" src="/assets/imgs/footer/Visa__logo.png" alt="">
-                <img class="card master" src="/assets/imgs/footer/Mastercard-logo.png" alt="">
-                <img class="card" src="/assets/imgs/footer/Mir-logo.png" alt="">
+                @for(card of puyCards(); track card; let odd = $odd){
+                    <img class="card" [class.master]="odd" [src]="card" alt=""> 
+                }@empty{
+                    <span>The collection is empty</span>
+                }
+
             </div>
             <p>Политика конфиденциальности</p>
         </div>
