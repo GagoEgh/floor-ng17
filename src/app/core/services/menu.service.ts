@@ -1,9 +1,10 @@
 import { Injectable, inject } from '@angular/core';
 import { Store, select } from '@ngrx/store';
-import { menuActionStart } from '../../store/action';
+import { floorTypeStart, menuActionStart } from '../../store/action';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { href, imgs, puyCards, topMenu } from '../../store/selectors';
+import { floorType, href, imgs, puyCards, topMenu } from '../../store/selectors';
 import { HttpClient } from '@angular/common/http';
+import { tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,29 +12,42 @@ import { HttpClient } from '@angular/common/http';
 export class MenuService {
   store = inject(Store);
   http = inject(HttpClient)
-  constructor() {}
+  constructor() { }
 
   topMenuSignal() {
     return toSignal(this.store.pipe(select(topMenu)))
-}
-  dispatch() {
+  }
+  
+  menuDispatch() {
     this.store.dispatch(menuActionStart());
   }
 
-  getHrefSignal(){
+  floorDispatch(){
+    this.store.dispatch(floorTypeStart())
+  }
+
+  getHrefSignal() {
     return toSignal(this.store.pipe(select(href)))
   }
 
-  getImgsSignal(){
+  getImgsSignal() {
     return toSignal(this.store.pipe(select(imgs)))
   }
 
-  getPuyCardsSignal(){
+  getPuyCardsSignal() {
     return toSignal(this.store.pipe(select(puyCards)))
   }
 
 
-  getHref(){
+  getHref() {
     return this.http.get('assets/href.json')
+  }
+
+  getFloorType(){
+    return this.http.get('assets/floorType.json')
+  }
+
+  getFloorTypeSignal(){
+    return toSignal(this.store.pipe(select(floorType)))
   }
 }

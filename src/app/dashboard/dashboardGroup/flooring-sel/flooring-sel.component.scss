@@ -1,307 +1,227 @@
 @import '../../../../assets/scss/mixins.scss';
 @import '../../../../assets/scss/variable.scss';
 
-.flooring{
+.flooring {
     display: flex;
     justify-content: center;
-    gap:196px;
+    gap: 196px;
     background: #F6F6F6;
     margin: 90px 0;
     padding-bottom: 90px;
 
-    @media(max-width:1024px){
-        gap:120px
+    @media(max-width:1024px) {
+        gap: 120px
     }
 
-    @media(max-width:769px){
-        gap:20px;
+    @media(max-width:769px) {
+        gap: 20px;
         flex-direction: column;
         align-items: center;
     }
 
-    .flooring-sel{
+    .flooring-sel {
         @include flex-column(80px);
         padding-top: 142px;
-        
-        @media(max-width:769px){
-           align-items: center;
-           width: fit-content;
-           padding-top: 45px;
+
+        @media(max-width:769px) {
+            align-items: center;
+            width: fit-content;
+            padding-top: 45px;
         }
 
-        @media(max-width:426px){
-            gap:0;
+        @media(max-width:426px) {
+            gap: 0;
         }
-        .sel-text{
+
+        .sel-text {
             @include flex-column(55px);
 
-            .span-block{
+            .span-block {
                 display: flex;
                 justify-content: space-between;
 
-                .text1{
-                    @include fontStyle($colorGray,11px,400)
+                .text1 {
+                    @include fontStyle($colorGray, 11px, 400)
                 }
-    
-                .text2{
-                    @include fontStyle($colorGold,11px,500);
+
+                .text2 {
+                    @include fontStyle($colorGold, 11px, 500);
                     font-variant-numeric: lining-nums proportional-nums;
                 }
 
             }
-       
-            .info{
+
+            .info {
                 @include flex-column(20px);
 
-                .title{
-                    @include fontStyle(#202020,43px,700);
+                .title {
+                    @include fontStyle(#202020, 43px, 700);
                     width: 453px;
-                    @media (max-width:1024px){
+
+                    @media (max-width:1024px) {
                         font-size: 26px;
                         width: 380px;
                     }
 
-                    @media (max-width:376px){
+                    @media (max-width:376px) {
                         font-size: 16px;
                         width: 300px;
                     }
                 }
-    
-                .par{
-                    @include fontStyle($colorGray,18px,400);
+
+                .par {
+                    @include fontStyle($colorGray, 18px, 400);
                 }
 
             }
-         
+
         }
 
-        .sel-btns{
+        .sel-btns {
             display: flex;
             gap: 45px;
 
-            @media(max-width:1024px){
-                gap: 25px;
+            @media(max-width:1024px) {
+                gap: 90px;
             }
 
-            @media (max-width:426px){
+            @media (max-width:426px) {
                 position: relative;
                 left: 0;
-                top: 495px;
+                top: 307px;
             }
-            @media (max-width:376px){
-                gap:8px
+
+            @media (max-width:376px) {
+                gap: 8px
             }
-            .back{
-                @include flex-center($colorGold,#F6F6F6,204px,55px);
+
+            .back {
+                @include flex-center($colorGold, #F6F6F6, 204px, 55px);
                 border: 1px solid $colorGold;
-                @media(max-width:1024px){
-                    @include flex-center($colorGold,#F6F6F6,150px,45px);
+                align-items: center;
+
+                @media(max-width:1024px) {
+                    @include flex-center($colorGold, #F6F6F6, 150px, 45px);
                 }
-                .back-img{
+
+                .back-img {
                     width: 5.632px;
                     height: 11.997px;
                 }
             }
 
-            .next{
-                @include flex-center(#FFF,$colorGold,204px,55px);
-                @media(max-width:1024px){
-                    @include flex-center(#FFF,$colorGold,150px,45px);
+            .next {
+                @include flex-center(#FFF, $colorGold, 204px, 55px);
+
+                @media(max-width:1024px) {
+                    @include flex-center(#FFF, $colorGold, 150px, 45px);
                 }
             }
         }
     }
 
-    .sel-imgs{
-        display: flex;
-        flex-direction: column;
+    .sel-imgs {
         gap: 50px;
         padding-top: 142px;
+        display: grid;
+        grid-template-columns: 90px 90px 90px;
 
-        @media(max-width:769px){
+        @media(max-width:769px) {
             width: 384px;
         }
 
-        @media (max-width:426px){
+        @media (max-width:426px) {
             width: fit-content;
-            padding-top: 50px;
+            padding-top: 0;
+            gap: 10px;
             flex-direction: column-reverse;
             margin-top: -55px;
         }
 
-        .top-imgs{
-            display: flex;
-            gap:70px;
+        .block {
+            @include flex-column(14px);
 
-            @media (max-width:1280px){
-                gap:30px;
-            }
+            .img-block {
+                border: 1px solid $colorGold;
+                height: 91px;
+                width: 95px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
 
-            @media (max-width:1024px){
-                gap:20px;
-            }
-
-            @media (max-width:769px){
-                justify-content: space-between;
-            }
-
-            @media (max-width:426px){
-                width: 230px;
-                flex-wrap: wrap;
-            }
-
-            .block{
-               @include flex-column(14px);
-
-                .img-block{
-                    border: 1px solid $colorGold;
-                    padding: 17px 14px;
-                    
-                    @media (max-width:1280px){
-                        width: 70px;
-                        height: 70px;
-                        padding: 0;
-                    }
-
-                    @media (max-width:1024px){
-                        width: 40px;
-                        height: 40px;
-                        padding: 0;
-                    }
-
-                    @media (max-width:769px){
-                        width: 70px;
-                        height: 70px;
-                        padding: 0;
-                    }
+                @media (max-width:1024px) {
+                    width: 40px;
+                    height: 40px;
                 }
 
-                .kovr-img{
-                    width: 116px;
-                    
-                    @media (max-width:1280px){
-                        width: 70px;
-                        height: 70px;
-                    }
-
-                    @media (max-width:1024px){
-                        width: 40px;
-                        height: 40px;
-                    }
-
-                    @media (max-width:769px){
-                        width: 70px;
-                        height: 70px;
-                    }
-                }
-
-                .laminat-img{
-                    width: 116px;
-                    
-                    @media (max-width:1280px){
-                        width: 70px;
-                        height: 70px;
-                    }
-
-                    @media (max-width:1024px){
-                        width: 40px;
-                        height: 40px;
-                    }
-
-                    @media (max-width:769px){
-                        width: 70px;
-                        height: 70px;
-                    }
-                }
-            }
-        }
-
-        .botom-imgs{
-            display: flex;
-            gap:30px;
-
-            @media (max-width:1280px){
-                gap:20px;
             }
 
-            @media (max-width:769px){
-                justify-content: space-between;
-            }
-
-            @media (max-width:426px){
-                width: 230px;
-            }
 
 
         }
 
-        .form-control{
+
+        .form-control {
             font-weight: bold;
             line-height: 1.1;
-            display:flex;
+            display: flex;
             align-items: center;
             gap: 5px;
 
-            @media (max-width:1280px){
+            @media (max-width:1280px) {
                 display: flex;
                 flex-direction: column;
                 align-items: start;
             }
 
-            span{
+            span {
                 color: var(--heading-color, #202020);
                 font-size: 9px;
                 font-weight: 400;
             }
         }
 
-        .form-control + .form-control {
+        .form-control+.form-control {
             margin-top: 1em;
         }
 
-      .floor-img{
 
-        @media (max-width:1280px){
-            width: 70px;
-            height: 70px;
-        }
 
-        @media (max-width:1024px){
-            width: 40px;
-            height: 40px;
-        }
+        .floor-img {
+            height: 91px;
+            width: 95px;
 
-        @media (max-width:769px){
-            width: 70px;
-            height: 70px;
+            @media (max-width:1024px) {
+                width: 40px;
+                height: 40px;
+            }
         }
-      }
     }
 }
 
 
-input[type="radio"]{
+input[type="radio"] {
     appearance: none;
     background-color: #fff;
     margin: 0;
     font: inherit;
     color: currentColor;
-    width: 30px;
-    height: 30px;
-    border: 1px solid  $colorGold;
+    width: 26px;
+    height: 23px;
+    border: 1px solid $colorGold;
     border-radius: 50%;
     display: grid;
     place-content: center;
     display: grid;
     place-content: center;
 
-    @media (max-width:1280px){
+    @media (max-width:1280px) {
         width: 20px;
         height: 20px;
     }
 }
 
-input[type="radio"]::before{
+input[type="radio"]::before {
     content: "";
     width: 10px;
     height: 10px;

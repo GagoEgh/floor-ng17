@@ -1,5 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Signal, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MenuService } from '../../../core/services/menu.service';
+import { IFloorType } from '../../../types/floorType.interface';
+
+interface Floor {
+  img: string,
+  name: string
+}
 
 @Component({
   selector: 'app-flooring-sel',
@@ -9,12 +16,14 @@ import { CommonModule } from '@angular/common';
   styleUrl: './flooring-sel.component.scss'
 })
 export class FlooringSelComponent {
+  menuService = inject(MenuService);
 
-  leftVector = "../../../assets/imgs/katalog/left-vector.png";
-  rightVector = "../../../assets/imgs/header/vector_right.png";
-  dots = "../../../assets/imgs/katalog/dots.png";
-  kovr = "../../../assets/imgs/katalog/kovr.png";
-  linoleum = "../../../assets/imgs/katalog/linoleum_icon.png";
-  pvh = "../../../assets/imgs/katalog/PVH.png";
-  laminat = "../../../assets/imgs/katalog/laminat_icon.png"
+  floorType!: Signal<IFloorType[] | undefined>;
+  leftVector = signal("../../../assets/imgs/katalog/left-vector.png");
+  rightVector = signal("../../../assets/imgs/header/vector_right.png");
+
+  constructor() {
+    this.menuService.floorDispatch();
+    this.floorType = this.menuService.getFloorTypeSignal();
+  }
 }

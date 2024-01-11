@@ -1,3 +1,4 @@
+import { IFloorType } from "./floorType.interface";
 import { Href } from "./href.interface";
 
 export interface BaseText{
@@ -6,5 +7,6 @@ export interface BaseText{
     imgs:string[],
     href:Href[],
     topMenu:string[],
+    floorType:IFloorType[]
 
 }

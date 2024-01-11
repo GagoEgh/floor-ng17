@@ -20,7 +20,7 @@ export class FooterComponent {
   puyCards!: Signal<string[] | undefined>;
   
   constructor() {
-    this.menuService.dispatch();
+    // this.menuService.dispatch();
     this.topMenu = this.menuService.topMenuSignal()
     this.href = this.menuService.getHrefSignal();
     this.puyCards = this.menuService.getPuyCardsSignal()
