@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './core/header/header/header.component';
 import { FooterComponent } from './core/footer/footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboardGroup/dashboard/dashboard.component';
-import { MenuService } from './core/services/menu.service';
+import { MenuService } from './apis/menu.service';
 
 @Component({
   selector: 'app-root',

@@ -1,12 +1,18 @@
 import { createReducer, on } from '@ngrx/store';
 import { BaseText } from '../types/baseText.interface';
-import { floorTypeError, floorTypeStart, floorTypeSucces, menuActionError, menuActionStart, menuActionSuccess } from './action';
+import { floorTypeError, floorTypeStart, floorTypeSucces, 
+    menuActionError, menuActionStart, menuActionSuccess, 
+    saleTitlFooterSucces, saleTitleFooterError,saleTitleFooterStart,
+    saleTitlHeadSucces, saleTitleHeadError, saleTitleHeadStart } from './action'; 
+     
 
 
 const baseText:BaseText = {
     isLoad:null,
     href:[],
     floorType:[],
+    saleTitleHead:[],
+    saleTitleFooter:[],
 
     puyCards:["/assets/imgs/footer/Visa__logo.png","/assets/imgs/footer/Mastercard-logo.png","/assets/imgs/footer/Mir-logo.png"],
     imgs:["/assets/imgs/header/login.png","/assets/imgs/header/star.png","/assets/imgs/header/shopping.png"],
@@ -23,5 +29,13 @@ export const baseReducer = createReducer(
 
     on(floorTypeStart,(state:BaseText)=>({...state})),
     on(floorTypeSucces,(state:BaseText,action)=>({...state,floorType:action.floorType})),
-    on(floorTypeError,(state:BaseText)=>({...state}))
+    on(floorTypeError,(state:BaseText)=>({...state})),
+
+    on(saleTitleHeadStart,(state:BaseText)=>({...state})),
+    on(saleTitlHeadSucces, (state:BaseText,action)=>({...state,saleTitleHead:action.saleTitle})),
+    on(saleTitleHeadError,(state:BaseText)=>({...state})),
+
+    on(saleTitleFooterStart,(state:BaseText)=>({...state})),
+    on(saleTitlFooterSucces, (state:BaseText,action)=>({...state,saleTitleFooter:action.saleTitleFooter})),
+    on(saleTitleFooterError,(state:BaseText)=>({...state}))
 )

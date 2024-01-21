@@ -1,12 +1,8 @@
 import { Component, Signal, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MenuService } from '../../../core/services/menu.service';
-import { IFloorType } from '../../../types/floorType.interface';
 
-interface Floor {
-  img: string,
-  name: string
-}
+import { IFloorType } from '../../../types/floorType.interface';
+import { MenuService } from '../../../apis/menu.service';
 
 @Component({
   selector: 'app-flooring-sel',

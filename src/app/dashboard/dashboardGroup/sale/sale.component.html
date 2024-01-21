@@ -1,0 +1,33 @@
+<div class="container">
+    <h1 class="title">Акции</h1>
+    <div class="sale">
+        <div class="head">
+            @for(item of saleTitleHeader(); track item; let idx = $index){
+            <div [ngClass]="item.styleClass">
+                <div class="info">
+                    <div class="info-text">
+                        <p>{{item.title}}</p>
+                    </div>
+                    <div class="img-block">
+                        <img src='{{vectorRight()}}'>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+        <div class="head">
+            @for(item of saleTitleFooter(); track item; let idx = $index){
+            <div [ngClass]="item.styleClass">
+                <div class="info">
+                    <div class="info-text">
+                        <p>{{item.title}}</p>
+                    </div>
+                    <div class="img-block">
+                        <img src='{{vectorRight()}}'>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</div>

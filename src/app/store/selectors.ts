@@ -8,4 +8,7 @@ export const href = createSelector(baseFeatureSelector,(state:BaseText)=>state.h
 export const imgs = createSelector(baseFeatureSelector,(state:BaseText)=>state.imgs);
 export const puyCards = createSelector(baseFeatureSelector,(state:BaseText)=>state.puyCards);
 export const floorType = createSelector(baseFeatureSelector,(state:BaseText)=>state.floorType);
+
+export const saleTitleHead = createSelector(baseFeatureSelector,(state:BaseText)=>state.saleTitleHead);
+export const saleTitleFooter = createSelector(baseFeatureSelector,(state:BaseText)=>state.saleTitleFooter);
 export const base = createSelector(baseFeatureSelector,(state:BaseText)=>state);

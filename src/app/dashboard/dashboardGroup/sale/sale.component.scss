@@ -1,0 +1,92 @@
+
+@import '../../../../assets/scss/mixins.scss';
+@import '../../../../assets/scss/variable.scss';
+
+.title{
+    color: var(--heading-color, #202020);
+    font-size: 40px;
+    font-weight: 700; 
+    padding-bottom: 50px;
+}
+
+.title::after{
+  @include after(197px)
+}
+
+
+.sale{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    margin-bottom: 60px;
+
+    
+    .head{
+        display: flex;
+        gap:20px;
+        @media (max-width:426px){
+            flex-wrap: wrap;
+        }
+
+        .export{
+            display: flex;
+            align-items: flex-end;
+            @include imgStyle(921px,290px,$export);
+            @media (max-width:426px){
+                height: 160px;
+            }
+        }
+
+        .escom{
+            display: flex;
+            align-items: flex-end;
+            @include imgStyle($imgWidth649,290px,$escom);
+            @media (max-width:426px){
+                height: 160px;
+            }
+        }
+
+        .stratos{
+            display: flex;
+            align-items: flex-end;
+            @include imgStyle($imgWidth649,290px,$stratos);
+            @media (max-width:426px){
+                height: 160px;
+            }
+        }
+    
+        .fast{
+            display: flex;
+            align-items: flex-end;
+            @include imgStyle(921px,290px,$fast);
+            @media (max-width:426px){
+                height: 160px;
+            }
+        }
+    }
+
+
+    .info{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0px 20px 20px 20px;
+
+        .info-text{
+            color: #FFF;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .img-block{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border: 1px solid white;
+        }
+    }
+    
+}

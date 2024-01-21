@@ -1,7 +1,7 @@
 import { Component, Signal, inject, } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Href } from '../../../types/href.interface';
-import { MenuService } from '../../services/menu.service';
+import { MenuService } from '../../../apis/menu.service';
 
 
 @Component({

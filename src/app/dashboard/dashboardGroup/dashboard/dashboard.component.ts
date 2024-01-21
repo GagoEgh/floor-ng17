@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FloorCoveringsComponent } from '../floor-coverings/floor-coverings.component';
 import { KatalogComponent } from '../katalog/katalog.component';
+import { SaleComponent } from '../sale/sale.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,7 +10,8 @@ import { KatalogComponent } from '../katalog/katalog.component';
   imports: [
     CommonModule,
     FloorCoveringsComponent,
-    KatalogComponent
+    KatalogComponent,
+    SaleComponent 
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'

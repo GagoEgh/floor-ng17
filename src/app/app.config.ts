@@ -9,6 +9,9 @@ import { provideHttpClient } from '@angular/common/http';
 import { EffectsModule, provideEffects } from '@ngrx/effects';
 import { HrefEffect } from './store/href.effect';
 import { FloorTypeEffect } from './store/floorType.effect';
+import { SaleTitleHeadEffect } from './store/saleTitleHead.effect';
+import { SaleTitleFooterEffect } from './store/saleTitleFooter.effect';
+
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -16,7 +19,9 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(),
     provideHttpClient(),
     provideStore({ ['baseText']: baseReducer }),
-    provideEffects([HrefEffect, FloorTypeEffect]),
+    provideEffects([
+      HrefEffect, FloorTypeEffect,
+      SaleTitleHeadEffect,SaleTitleFooterEffect]),
 
   ]
 };
