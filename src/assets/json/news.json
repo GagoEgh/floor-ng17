@@ -1,0 +1,20 @@
+[
+    {   
+        "img":"assets/imgs/news/storage.png",
+        "title":"Новое поступление на склад",
+        "text": "Новое поступление на наш склад — ковровая плитка Escom Object теперь есть в наличии!",
+        "btn":{
+            "img":"assets/imgs/news/gold-right.png",
+            "text":"Подробнее"
+        }
+    },
+    {
+        "img":"assets/imgs/news/desso.png",
+        "title":"Скидка на desso stratos",
+        "text": "Отличная новость! Ковровая плитка Desso Stratos — скидки на весь ассортимент",
+        "btn":{
+            "img":"assets/imgs/news/gold-right.png",
+            "text":"Подробнее"
+        }
+    }
+]

@@ -9,19 +9,22 @@ export class GetJsonService {
     http = inject(HttpClient);
 
     getHref() {
-        return this.http.get('assets/href.json')
+        return this.http.get('assets/json/href.json')
     }
 
     getFloorType() {
-        return this.http.get('assets/floorType.json')
+        return this.http.get('assets/json/floorType.json')
     }
 
     getSaleTitleHead(){
-        return this.http.get('assets/saleTitleHeader.json')
+        return this.http.get('assets/json/saleTitleHeader.json')
     }
 
     getSaleTitleFooter(){
-        return this.http.get('assets/saleTitleFooter.json')
+        return this.http.get('assets/json/saleTitleFooter.json')
     }
 
+    getNews(){
+        return this.http.get('assets/json/news.json')
+    }
 }
