@@ -1,0 +1,97 @@
+@import '../../../../assets/scss/mixins.scss';
+@import '../../../../assets/scss/variable.scss';
+
+
+.news-title{
+    @include titleStyle()
+
+}
+
+.news-title::after{
+  @include after(274px);
+  
+}
+
+
+.news{
+
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 60px;
+
+    @media (max-width:426px){
+        flex-direction: column;
+    }
+    .section{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        width: 45%;
+
+        @media (max-width:426px){
+            width: 96%;
+        }
+        
+        .news-text{
+            display: flex;
+
+            @media (max-width:769px){
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .text-block{
+                @media (max-width:769px){
+                    height: 130px;
+                }
+                
+                @media (max-width:426px){
+                    height: 60px;
+                }
+                h3{
+                    color: var(--heading-color, #202020);
+                    font-size: 25px;
+                    font-weight: 600;
+
+                    @media (max-width:1024px){
+                        font-size: 22px;
+                    }
+                }
+    
+                p{
+                    color: var(--text-color, #666);
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 150%;
+
+                    @media (max-width:1024px){
+                        font-size: 10px;
+                        font-weight: 300;
+                    }
+                }
+            }
+
+    
+            .btn{
+                @include flex-center($colorGold,#F6F6F6,204px,55px);
+                border: 1px solid $colorGold;
+                padding: 0 5px;
+                @media (max-width:1024px){
+                    font-size: 14px;
+                    width: 150px;
+                    height: 45px;
+                }
+            }
+        }
+
+        .section-img{
+            height: 220px;
+            @media (max-width:426px){
+                height: 150px;
+            }
+        }
+
+       
+    }
+}

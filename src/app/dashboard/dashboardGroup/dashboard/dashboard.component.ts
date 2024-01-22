@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FloorCoveringsComponent } from '../floor-coverings/floor-coverings.component';
 import { KatalogComponent } from '../katalog/katalog.component';
 import { SaleComponent } from '../sale/sale.component';
+import { NewsComponent } from '../news/news.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,7 +12,8 @@ import { SaleComponent } from '../sale/sale.component';
     CommonModule,
     FloorCoveringsComponent,
     KatalogComponent,
-    SaleComponent 
+    SaleComponent,
+    NewsComponent 
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
