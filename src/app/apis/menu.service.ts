@@ -1,8 +1,8 @@
 import { Injectable, inject } from '@angular/core';
 import { Store, select } from '@ngrx/store';
-import { floorTypeStart, menuActionStart, saleTitleFooterStart, saleTitleHeadStart } from '../store/action';
+import { floorTypeStart, menuActionStart, newsStart, saleTitleFooterStart, saleTitleHeadStart } from '../store/action';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { floorType, href, imgs, puyCards, saleTitleFooter, saleTitleHead, topMenu } from '../store/selectors';
+import { floorType, href, imgs, news, puyCards, saleTitleFooter, saleTitleHead, topMenu } from '../store/selectors';
 
 
 @Injectable({
@@ -10,27 +10,36 @@ import { floorType, href, imgs, puyCards, saleTitleFooter, saleTitleHead, topMen
 })
 export class MenuService {
   store = inject(Store);
- 
-  topMenuSignal() {
-    return toSignal(this.store.pipe(select(topMenu)))
-  }
-  
+
+
+
   menuDispatch() {
     this.store.dispatch(menuActionStart());
   }
 
-  floorDispatch(){
+  floorDispatch() {
     this.store.dispatch(floorTypeStart())
   }
 
-  saleHeadDispatch(){
+  saleHeadDispatch() {
     this.store.dispatch(saleTitleHeadStart())
   }
 
-  saleFooterDispatch(){
+  saleFooterDispatch() {
     this.store.dispatch(saleTitleFooterStart())
   }
 
+  newsDispatch() {
+    this.store.dispatch(newsStart())
+  }
+
+  newsSignal(){
+    return toSignal(this.store.pipe(select(news)))
+  }
+
+  topMenuSignal() {
+    return toSignal(this.store.pipe(select(topMenu)))
+  }
 
   getHrefSignal() {
     return toSignal(this.store.pipe(select(href)))
@@ -45,15 +54,15 @@ export class MenuService {
   }
 
 
-  getFloorTypeSignal(){
+  getFloorTypeSignal() {
     return toSignal(this.store.pipe(select(floorType)))
   }
 
-  getSaleTitleHeadSignal(){
+  getSaleTitleHeadSignal() {
     return toSignal(this.store.pipe(select(saleTitleHead)))
   }
 
-  getSaleTitleFooterSignal(){
+  getSaleTitleFooterSignal() {
     return toSignal(this.store.pipe(select(saleTitleFooter)))
   }
 

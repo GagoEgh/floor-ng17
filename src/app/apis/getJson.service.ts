@@ -1,6 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable, inject } from "@angular/core";
-import { tap } from "rxjs";
+import { Observable, tap } from "rxjs";
+import { INews } from "../types/news.interface";
 
 @Injectable(
     { providedIn: 'root' }
@@ -24,7 +25,7 @@ export class GetJsonService {
         return this.http.get('assets/json/saleTitleFooter.json')
     }
 
-    getNews(){
-        return this.http.get('assets/json/news.json')
+    getNews():Observable<INews[]>{
+        return this.http.get<INews[]>('assets/json/news.json')
     }
 }

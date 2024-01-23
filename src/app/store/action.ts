@@ -3,6 +3,7 @@ import { ActionType } from './actions.types';
 import { Href } from '../types/href.interface';
 import { IFloorType } from '../types/floorType.interface';
 import { ISaleTitle } from '../types/saleTitle.interface';
+import { INews } from '../types/news.interface';
 
 export const menuActionStart = createAction(ActionType.MENU_START);
 export const menuActionSuccess = createAction(ActionType.MENU_SUCCESS, props<{ href: Href[] }>());
@@ -18,4 +19,8 @@ export const saleTitleHeadError = createAction(ActionType.SALETITLEHEAD_ERROR);
 
 export const saleTitleFooterStart = createAction(ActionType.SALETITLEFOOTER_START);
 export const saleTitlFooterSucces = createAction(ActionType.SALETITLEFOOTER_SUCCESS, props<{ saleTitleFooter: ISaleTitle[] }>());
-export const saleTitleFooterError = createAction(ActionType.SALETITLEFOOTER_ERROR)
+export const saleTitleFooterError = createAction(ActionType.SALETITLEFOOTER_ERROR);
+
+export const newsStart = createAction(ActionType.NEWS_START);
+export const newSucces = createAction(ActionType.NEWS_SUCCESS, props<{ news: INews[] }>());
+export const newsError = createAction(ActionType.NEWS_ERROR)

@@ -16,10 +16,12 @@
 .news{
 
     display: flex;
-    gap: 30px;
+    gap: 140px;
     justify-content: center;
     margin-bottom: 60px;
-
+    @media (max-width:1024px){
+        gap: 90px;
+    }
     @media (max-width:426px){
         flex-direction: column;
     }

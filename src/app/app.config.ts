@@ -11,6 +11,7 @@ import { HrefEffect } from './store/href.effect';
 import { FloorTypeEffect } from './store/floorType.effect';
 import { SaleTitleHeadEffect } from './store/saleTitleHead.effect';
 import { SaleTitleFooterEffect } from './store/saleTitleFooter.effect';
+import { NewsEffect } from './store/news.effect';
 
 
 export const appConfig: ApplicationConfig = {
@@ -20,7 +21,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
     provideStore({ ['baseText']: baseReducer }),
     provideEffects([
-      HrefEffect, FloorTypeEffect,
+      HrefEffect, FloorTypeEffect,NewsEffect,
       SaleTitleHeadEffect,SaleTitleFooterEffect]),
 
   ]

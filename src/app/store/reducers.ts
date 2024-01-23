@@ -3,7 +3,10 @@ import { BaseText } from '../types/baseText.interface';
 import { floorTypeError, floorTypeStart, floorTypeSucces, 
     menuActionError, menuActionStart, menuActionSuccess, 
     saleTitlFooterSucces, saleTitleFooterError,saleTitleFooterStart,
-    saleTitlHeadSucces, saleTitleHeadError, saleTitleHeadStart } from './action'; 
+    saleTitlHeadSucces, saleTitleHeadError, saleTitleHeadStart, 
+    newsStart, 
+    newSucces,
+    newsError} from './action'; 
      
 
 
@@ -13,6 +16,7 @@ const baseText:BaseText = {
     floorType:[],
     saleTitleHead:[],
     saleTitleFooter:[],
+    news:[],
 
     puyCards:["/assets/imgs/footer/Visa__logo.png","/assets/imgs/footer/Mastercard-logo.png","/assets/imgs/footer/Mir-logo.png"],
     imgs:["/assets/imgs/header/login.png","/assets/imgs/header/star.png","/assets/imgs/header/shopping.png"],
@@ -37,5 +41,9 @@ export const baseReducer = createReducer(
 
     on(saleTitleFooterStart,(state:BaseText)=>({...state})),
     on(saleTitlFooterSucces, (state:BaseText,action)=>({...state,saleTitleFooter:action.saleTitleFooter})),
-    on(saleTitleFooterError,(state:BaseText)=>({...state}))
+    on(saleTitleFooterError,(state:BaseText)=>({...state})),
+
+    on(newsStart,(state:BaseText)=>({...state})),
+    on(newSucces,(state:BaseText,action)=>({...state,news:action.news})),
+    on(newsError,(state:BaseText)=>({...state}))
 )
