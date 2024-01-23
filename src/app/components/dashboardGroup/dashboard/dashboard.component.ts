@@ -5,6 +5,7 @@ import { KatalogComponent } from '../katalog/katalog.component';
 import { SaleComponent } from '../sale/sale.component';
 import { NewsComponent } from '../news/news.component';
 
+
 @Component({
   selector: 'app-dashboard',
   standalone: true,
