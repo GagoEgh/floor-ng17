@@ -6,7 +6,7 @@ import { provideClientHydration } from '@angular/platform-browser';
 import { provideStore } from '@ngrx/store';
 import { baseReducer } from './store/reducers';
 import { provideHttpClient } from '@angular/common/http';
-import { EffectsModule, provideEffects } from '@ngrx/effects';
+import {  provideEffects } from '@ngrx/effects';
 import { HrefEffect } from './store/href.effect';
 import { FloorTypeEffect } from './store/floorType.effect';
 import { SaleTitleHeadEffect } from './store/saleTitleHead.effect';

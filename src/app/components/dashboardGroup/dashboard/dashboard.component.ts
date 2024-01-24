@@ -4,6 +4,7 @@ import { FloorCoveringsComponent } from '../floor-coverings/floor-coverings.comp
 import { KatalogComponent } from '../katalog/katalog.component';
 import { SaleComponent } from '../sale/sale.component';
 import { NewsComponent } from '../news/news.component';
+import { ReviewsComponent } from '../reviews/reviews.component';
 
 
 @Component({
@@ -14,7 +15,8 @@ import { NewsComponent } from '../news/news.component';
     FloorCoveringsComponent,
     KatalogComponent,
     SaleComponent,
-    NewsComponent 
+    NewsComponent,
+    ReviewsComponent
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
