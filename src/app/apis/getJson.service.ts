@@ -28,4 +28,8 @@ export class GetJsonService {
     getNews():Observable<INews[]>{
         return this.http.get<INews[]>('assets/json/news.json')
     }
+
+    getReviews(){
+        return this.http.get('assets/json/reviews.json')
+    }
 }

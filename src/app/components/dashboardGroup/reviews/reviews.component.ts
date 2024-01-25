@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { GetJsonService } from '../../../apis/getJson.service';
+import { MenuService } from '../../../apis/menu.service';
+import { IReviews } from '../../../types/reviews.interface';
 
 @Component({
   selector: 'app-reviews',
@@ -10,7 +13,17 @@ import { CommonModule } from '@angular/common';
 })
 export class ReviewsComponent {
 
+  menuService = inject(MenuService);
+ 
+
+  reviews: Signal<IReviews[] | undefined>;
   goldRight = "assets/imgs/news/gold-right.png";
   fiveStar = "assets/imgs/reviews/5star.png";
   fourStar = "assets/imgs/reviews/4star.png";
+
+  constructor() {
+
+    this.menuService.reviewsDispatch();
+    this.reviews = this.menuService.reviewsSignal();
+  }
 }

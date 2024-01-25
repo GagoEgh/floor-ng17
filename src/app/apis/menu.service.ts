@@ -1,8 +1,8 @@
 import { Injectable, inject } from '@angular/core';
 import { Store, select } from '@ngrx/store';
-import { floorTypeStart, menuActionStart, newsStart, saleTitleFooterStart, saleTitleHeadStart } from '../store/action';
+import { floorTypeStart, menuActionStart, newsStart, reviewsStart, saleTitleFooterStart, saleTitleHeadStart } from '../store/action';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { floorType, href, imgs, news, puyCards, saleTitleFooter, saleTitleHead, topMenu } from '../store/selectors';
+import { floorType, href, imgs, news, puyCards, reviews, saleTitleFooter, saleTitleHead, topMenu } from '../store/selectors';
 
 
 @Injectable({
@@ -33,6 +33,14 @@ export class MenuService {
     this.store.dispatch(newsStart())
   }
 
+  reviewsDispatch(){
+    this.store.dispatch(reviewsStart())
+  }
+
+  reviewsSignal(){
+    return toSignal(this.store.pipe(select(reviews)))
+  }
+  
   newsSignal(){
     return toSignal(this.store.pipe(select(news)))
   }

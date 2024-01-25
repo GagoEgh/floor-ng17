@@ -12,4 +12,6 @@ export const floorType = createSelector(baseFeatureSelector,(state:BaseText)=>st
 export const saleTitleHead = createSelector(baseFeatureSelector,(state:BaseText)=>state.saleTitleHead);
 export const saleTitleFooter = createSelector(baseFeatureSelector,(state:BaseText)=>state.saleTitleFooter);
 export const news = createSelector(baseFeatureSelector,(state:BaseText)=>state.news);
+
+export const reviews = createSelector(baseFeatureSelector,(state:BaseText)=>state.reviews);
 export const base = createSelector(baseFeatureSelector,(state:BaseText)=>state);

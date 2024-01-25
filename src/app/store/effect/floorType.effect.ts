@@ -1,8 +1,8 @@
 import { Injectable, inject } from "@angular/core";
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { floorTypeError, floorTypeStart, floorTypeSucces } from "./action";
+import { floorTypeError, floorTypeStart, floorTypeSucces } from "../action";
 import { catchError, map, of, switchMap } from "rxjs";
-import { GetJsonService } from "../apis/getJson.service";
+import { GetJsonService } from "../../apis/getJson.service";
 
 @Injectable()
 export class FloorTypeEffect{

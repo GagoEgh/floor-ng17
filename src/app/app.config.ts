@@ -7,11 +7,12 @@ import { provideStore } from '@ngrx/store';
 import { baseReducer } from './store/reducers';
 import { provideHttpClient } from '@angular/common/http';
 import {  provideEffects } from '@ngrx/effects';
-import { HrefEffect } from './store/href.effect';
-import { FloorTypeEffect } from './store/floorType.effect';
-import { SaleTitleHeadEffect } from './store/saleTitleHead.effect';
-import { SaleTitleFooterEffect } from './store/saleTitleFooter.effect';
-import { NewsEffect } from './store/news.effect';
+import { HrefEffect } from './store/effect/href.effect';
+import { FloorTypeEffect } from './store/effect/floorType.effect';
+import { SaleTitleHeadEffect } from './store/effect/saleTitleHead.effect';
+import { SaleTitleFooterEffect } from './store/effect/saleTitleFooter.effect';
+import { NewsEffect } from './store/effect/news.effect';
+import { ReviewsEffect } from './store/effect/reviews.effect';
 
 
 export const appConfig: ApplicationConfig = {
@@ -21,7 +22,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
     provideStore({ ['baseText']: baseReducer }),
     provideEffects([
-      HrefEffect, FloorTypeEffect,NewsEffect,
+      HrefEffect, FloorTypeEffect,NewsEffect,ReviewsEffect,
       SaleTitleHeadEffect,SaleTitleFooterEffect]),
 
   ]

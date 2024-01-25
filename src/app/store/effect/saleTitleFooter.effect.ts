@@ -1,7 +1,7 @@
 import { Injectable, inject } from "@angular/core";
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { GetJsonService } from "../apis/getJson.service";
-import { saleTitlFooterSucces, saleTitleFooterError, saleTitleFooterStart } from "./action";
+import { GetJsonService } from "../../apis/getJson.service";
+import { saleTitlFooterSucces, saleTitleFooterError, saleTitleFooterStart } from "../action";
 import { catchError, map, of, switchMap } from "rxjs";
 
 

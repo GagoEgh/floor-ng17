@@ -1,6 +1,7 @@
 import { IFloorType } from "./floorType.interface";
 import { Href } from "./href.interface";
 import { INews } from "./news.interface";
+import { IReviews } from "./reviews.interface";
 import { ISaleTitle } from "./saleTitle.interface";
 
 export interface BaseText{
@@ -12,6 +13,7 @@ export interface BaseText{
     floorType:IFloorType[],
     saleTitleHead:ISaleTitle[],
     saleTitleFooter:ISaleTitle[],
-    news:INews[]
+    news:INews[],
+    reviews:IReviews[]
 
 }
