@@ -1,15 +1,16 @@
 import { Routes } from '@angular/router';
-import { DashboardComponent } from './components/dashboardGroup/dashboard/dashboard.component';
-import { KatalogKovrolinComponent } from './components/katalogGroup/katalog/katalog.component';
 
 export const routes: Routes = [
     {
-        path:'',
+        path: '',
         pathMatch:'full',
-        component:DashboardComponent
+        loadComponent: () => import('../app/components/dashboardGroup/dashboard/dashboard.component')
+            .then(m => m.DashboardComponent)
     },
     {
         path:'katalog',
-        component:KatalogKovrolinComponent 
+    
+        loadComponent:()=>import('../app/components/katalogGroup/katalog/katalog.component')
+        .then(m=>m.KatalogKovrolinComponent)
     }
 ];

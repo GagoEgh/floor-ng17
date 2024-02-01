@@ -1,0 +1,84 @@
+@import '../../../../assets/scss/mixins.scss';
+@import '../../../../assets/scss/variable.scss';
+
+.covrolin{
+   width: 350px;
+    .covrolin-img{
+        height: 205px;
+        width: 350px;
+    }
+    
+    .covrolin-about{
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+        margin:0 15px;
+      
+        .covrolin-block{
+            display: flex;
+            justify-content: space-between;
+
+            p{
+                color: #666;
+                font-size: 16px;
+                font-weight: 500; 
+            }
+
+            .flag{
+                width: 25px;
+                height: 20px;
+            }
+
+            .sum{
+                color: var(--Gold, #C68F4E);
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+
+        .title{
+            color: #202020;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .sel-btns{
+            display: flex;
+            gap: 45px;
+
+            @media(max-width:1024px){
+                gap: 25px;
+            }
+
+            @media (max-width:426px){
+                position: relative;
+                left: 0;
+                top: 495px;
+            }
+            @media (max-width:376px){
+                gap:8px
+            }
+            .back{
+                @include flex-center($colorGold,#F6F6F6,204px,55px);
+                border: 1px solid $colorGold;
+                @media(max-width:1024px){
+                    @include flex-center($colorGold,#F6F6F6,150px,45px);
+                }
+                .back-img{
+                    width: 5.632px;
+                    height: 11.997px;
+                }
+                font-size: 16px
+            }
+
+            .next{
+                @include flex-center(#FFF,$colorGold,204px,55px);
+                @media(max-width:1024px){
+                    @include flex-center(#FFF,$colorGold,150px,45px);
+                }
+
+                font-size: 16px
+            }
+        }
+    }
+}

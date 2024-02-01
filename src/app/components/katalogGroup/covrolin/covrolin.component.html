@@ -1,0 +1,26 @@
+<section class="covrolin">
+    <img class="covrolin-img" [src]="covrolin?.img">
+    <div class="covrolin-about">
+        <div class="covrolin-block">
+            <p>#{{covrolin?.id}}</p>
+            <img [src]="covrolin?.country?.flag" class="flag">
+        </div>
+        <h4 class="title">Ковролин {{covrolin?.collection}}</h4>
+        <p>Высота ворса: {{covrolin?.pileHeight}}мм</p>
+        <div class="covrolin-block">
+            <p>Класс применения: {{covrolin?.applications}}</p>
+            <p class="sum">{{covrolin?.sum}}</p>
+        </div>
+        <p>Состав ворса: {{covrolin?.pileComposition}}</p>
+
+        <div class="sel-btns">
+            <div class="back">
+                <p>Оформить заказ</p>
+            </div>
+            <div class="next">
+                <p>В корзину</p>
+            </div>
+        </div>
+        
+    </div>
+</section>

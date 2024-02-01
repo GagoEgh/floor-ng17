@@ -32,4 +32,8 @@ export class GetJsonService {
     getReviews(){
         return this.http.get('assets/json/reviews.json')
     }
+
+    getCovrolin(){
+        return this.http.get('assets/json/covrolins.json')
+    }
 }

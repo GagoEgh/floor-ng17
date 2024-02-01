@@ -10,7 +10,10 @@ import {
     newsError,
     reviewsStart,
     reviewsSucces,
-    reviewsError
+    reviewsError,
+    covrolinsStart,
+    covrolinsSucces,
+    covrolinsError
 } from './action';
 
 
@@ -23,6 +26,7 @@ const baseText: BaseText = {
     saleTitleFooter: [],
     news: [],
     reviews: [],
+    covrolins:[],
 
     puyCards: ["/assets/imgs/footer/Visa__logo.png", "/assets/imgs/footer/Mastercard-logo.png", "/assets/imgs/footer/Mir-logo.png"],
     imgs: ["/assets/imgs/header/login.png", "/assets/imgs/header/star.png", "/assets/imgs/header/shopping.png"],
@@ -55,5 +59,9 @@ export const baseReducer = createReducer(
 
     on(reviewsStart, (state: BaseText) => ({ ...state })),
     on(reviewsSucces, (state: BaseText, action) => ({ ...state, reviews: action.reviews })),
-    on(reviewsError, (state: BaseText) => ({ ...state }))
+    on(reviewsError, (state: BaseText) => ({ ...state })),
+
+    on(covrolinsStart, (state: BaseText) => ({ ...state })),
+    on(covrolinsSucces, (state: BaseText, action) => ({ ...state, covrolins: action.covrolins })),
+    on(covrolinsError, (state: BaseText) => ({ ...state })),
 )

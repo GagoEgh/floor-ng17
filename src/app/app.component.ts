@@ -10,10 +10,11 @@ import { DashboardComponent } from './components/dashboardGroup/dashboard/dashbo
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet,
+ 
     HeaderComponent,
     DashboardComponent,
-    FooterComponent
+    FooterComponent,
+    RouterOutlet,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

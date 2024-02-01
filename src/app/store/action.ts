@@ -5,6 +5,7 @@ import { IFloorType } from '../types/floorType.interface';
 import { ISaleTitle } from '../types/saleTitle.interface';
 import { INews } from '../types/news.interface';
 import { IReviews } from '../types/reviews.interface';
+import { ICovrolin } from '../types/covfolin.interface';
 
 export const menuActionStart = createAction(ActionType.MENU_START);
 export const menuActionSuccess = createAction(ActionType.MENU_SUCCESS, props<{ href: Href[] }>());
@@ -28,4 +29,8 @@ export const newsError = createAction(ActionType.NEWS_ERROR);
 
 export const reviewsStart = createAction(ActionType.REVIEWS_START);
 export const reviewsSucces = createAction(ActionType.REVIEWS_SUCCESS, props<{ reviews: IReviews[] }>());
-export const reviewsError = createAction(ActionType.REVIEWS_ERROR)
+export const reviewsError = createAction(ActionType.REVIEWS_ERROR);
+
+export const covrolinsStart = createAction(ActionType.COVROLIN_START);
+export const covrolinsSucces = createAction(ActionType.COVROLIN_SUCCESS, props<{ covrolins: ICovrolin[] }>());
+export const covrolinsError = createAction(ActionType.COVROLIN_ERROR)

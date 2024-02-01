@@ -1,22 +1,22 @@
 [
     {
-      "img":"assets/imgs/katalog/dots.png",
+      "img":"assets/imgs/dashborders/katalog/dots.png",
       "name":"Ковролин"
     },
     {
-      "img":"assets/imgs/katalog/kovr.png",
+      "img":"assets/imgs/dashborders/katalog/kovr.png",
       "name":"Ковровая плитка"
     },
     {
-      "img":"assets/imgs/katalog/linoleum_icon.png",
+      "img":"assets/imgs/dashborders/katalog/linoleum_icon.png",
       "name":"Линолеум"
     },
     {
-      "img":"assets/imgs/katalog/PVH.png",
+      "img":"assets/imgs/dashborders/katalog/PVH.png",
       "name":"Дизайн-плитка ПВХ"
     },
     {
-      "img":"assets/imgs/katalog/laminat_icon.png",
+      "img":"assets/imgs/dashborders/katalog/laminat_icon.png",
       "name":"Ламинат"
     }
   ]

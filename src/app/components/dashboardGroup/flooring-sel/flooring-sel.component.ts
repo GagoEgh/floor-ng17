@@ -15,8 +15,8 @@ export class FlooringSelComponent {
   menuService = inject(MenuService);
 
   floorType!: Signal<IFloorType[] | undefined>;
-  leftVector = signal("../../../assets/imgs/katalog/left-vector.png");
-  rightVector = signal("../../../assets/imgs/header/vector_right.png");
+  leftVector = signal("/assets/imgs/dashborders/katalog/left-vector.png");
+  rightVector = signal("/assets/imgs/header/vector_right.png");
 
   constructor() {
     this.menuService.floorDispatch();

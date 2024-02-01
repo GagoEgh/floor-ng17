@@ -17,9 +17,9 @@ export class ReviewsComponent {
  
 
   reviews: Signal<IReviews[] | undefined>;
-  goldRight = "assets/imgs/news/gold-right.png";
-  fiveStar = "assets/imgs/reviews/5star.png";
-  fourStar = "assets/imgs/reviews/4star.png";
+  goldRight = "assets/imgs/dashborders/news/gold-right.png";
+  fiveStar = "assets/imgs/dashborders/reviews/5star.png";
+  fourStar = "assets/imgs/dashborders/reviews/4star.png";
 
   constructor() {
 

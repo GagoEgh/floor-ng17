@@ -1,3 +1,4 @@
+import { ICovrolin } from "./covfolin.interface";
 import { IFloorType } from "./floorType.interface";
 import { Href } from "./href.interface";
 import { INews } from "./news.interface";
@@ -14,6 +15,7 @@ export interface BaseText{
     saleTitleHead:ISaleTitle[],
     saleTitleFooter:ISaleTitle[],
     news:INews[],
-    reviews:IReviews[]
+    reviews:IReviews[],
+    covrolins:ICovrolin[]
 
 }

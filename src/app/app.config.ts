@@ -13,6 +13,7 @@ import { SaleTitleHeadEffect } from './store/effect/saleTitleHead.effect';
 import { SaleTitleFooterEffect } from './store/effect/saleTitleFooter.effect';
 import { NewsEffect } from './store/effect/news.effect';
 import { ReviewsEffect } from './store/effect/reviews.effect';
+import { CovrolinsEffect } from './store/effect/covrolins.effect';
 
 
 export const appConfig: ApplicationConfig = {
@@ -23,7 +24,7 @@ export const appConfig: ApplicationConfig = {
     provideStore({ ['baseText']: baseReducer }),
     provideEffects([
       HrefEffect, FloorTypeEffect,NewsEffect,ReviewsEffect,
-      SaleTitleHeadEffect,SaleTitleFooterEffect]),
+      SaleTitleHeadEffect,SaleTitleFooterEffect,CovrolinsEffect]),
 
   ]
 };

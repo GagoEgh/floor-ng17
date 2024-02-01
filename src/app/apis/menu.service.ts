@@ -1,8 +1,8 @@
 import { Injectable, inject } from '@angular/core';
 import { Store, select } from '@ngrx/store';
-import { floorTypeStart, menuActionStart, newsStart, reviewsStart, saleTitleFooterStart, saleTitleHeadStart } from '../store/action';
+import { covrolinsStart, floorTypeStart, menuActionStart, newsStart, reviewsStart, saleTitleFooterStart, saleTitleHeadStart } from '../store/action';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { floorType, href, imgs, news, puyCards, reviews, saleTitleFooter, saleTitleHead, topMenu } from '../store/selectors';
+import { covrolins, floorType, href, imgs, news, puyCards, reviews, saleTitleFooter, saleTitleHead, topMenu } from '../store/selectors';
 
 
 @Injectable({
@@ -10,8 +10,6 @@ import { floorType, href, imgs, news, puyCards, reviews, saleTitleFooter, saleTi
 })
 export class MenuService {
   store = inject(Store);
-
-
 
   menuDispatch() {
     this.store.dispatch(menuActionStart());
@@ -35,6 +33,10 @@ export class MenuService {
 
   reviewsDispatch(){
     this.store.dispatch(reviewsStart())
+  }
+
+  covrolinsDispatch(){
+    this.store.dispatch(covrolinsStart())
   }
 
   reviewsSignal(){
@@ -74,4 +76,7 @@ export class MenuService {
     return toSignal(this.store.pipe(select(saleTitleFooter)))
   }
 
+  getCovrolinsSignal(){
+    return toSignal(this.store.pipe(select(covrolins)))
+  }
 }
