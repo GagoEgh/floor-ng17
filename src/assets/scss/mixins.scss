@@ -67,3 +67,24 @@
     font-weight: 700;
     padding-bottom: 50px;
 }
+
+@mixin imgStyle($opacity,$url){
+    position: relative;
+    left: 25%;
+    opacity:$opacity;
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+    top: 21%;
+}
+
+@mixin imgPosition($left,$opacity){
+    position: absolute;
+    left: $left;
+    width: 48px;
+    height: 48px;
+    background: #C68F4E;
+    opacity: $opacity;
+}

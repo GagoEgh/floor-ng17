@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './core/header/header/header.component';
 import { FooterComponent } from './core/footer/footer/footer.component';
@@ -25,4 +25,9 @@ export class AppComponent {
     this.menuService.menuDispatch();
 
   }
+
+  // @HostListener('document:scroll', ['$event'])
+  // public onViewportScroll() {
+  //   console.log('asas')
+  // }
 }

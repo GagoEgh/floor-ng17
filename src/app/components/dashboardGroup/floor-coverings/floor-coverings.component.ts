@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
   selector: 'app-floor-coverings',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './floor-coverings.component.html',
   styleUrl: './floor-coverings.component.scss'
 })

@@ -2,25 +2,17 @@
     <h1 class="title">Каталог ковролин</h1>
     <div class="block">
         <nav class="bar">
-
         </nav>
-
         <div class="katalog">
             <div class="search">
                 <p>Search:</p>
-                <!-- <input autocomplete="off" type="text" [(ngModel)]="title"> -->
+                <input autocomplete="off" type="text" [(ngModel)]="title">
             </div>
             <div class="covrolins">
                 @for(covrolin of covrolins(); track covrolin){
-                    <app-covrolin [covrolin]="covrolin"></app-covrolin>
+                <app-covrolin [covrolin]="covrolin"></app-covrolin>
                 }
-                <!-- <app-covrolin *ngFor="let covrolin of (covrolins())"
-                 [covrolin]="covrolin"></app-covrolin> -->
             </div>
-          
         </div>
     </div>
-
-  
-
 </div>

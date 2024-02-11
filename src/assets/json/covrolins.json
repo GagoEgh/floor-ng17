@@ -34,11 +34,11 @@
         "base": "Джут",
         "pileHeight": "3",
         "pileComposition": "Полиамид",
-        "img":"assets/imgs/katalogGroup/covrolins/covrolin1.png"
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin1.png"
     },
     {
         "id": 43104,
-        "sum":"60 484 ₽/м2",
+        "sum": "60 484 ₽/м2",
         "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
         "color": {
             "img": "assets/imgs/katalogGroup/covrolins/brown.png",
@@ -48,9 +48,14 @@
             "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
             "country": "Германия"
         },
-        "collection": "DECK CARPET CAVROLIN SOCOVENA & MAPLA VENUS",
+        "collection": "DECK CARPET CAVROLIN",
         "coatingType": "Коммерческий",
-        "roomType": ["Гостиницы", "Кинотеатры и театры", "Офисы", "Рестораны", "клубы"
+        "roomType": [
+            "Гостиницы",
+            "Кинотеатры и театры",
+            "Офисы",
+            "Рестораны",
+            "клубы"
         ],
         "drawingType": "Не однотонный",
         "applications": 33,
@@ -66,12 +71,12 @@
         "base": "Джут",
         "pileHeight": 3,
         "pileComposition": "Полиамид",
-        "img":"assets/imgs/katalogGroup/covrolins/covrolin2.png"
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin2.png"
     },
     {
         "id": 43104,
         "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
-        "sum":"60 484 ₽/м2",
+        "sum": "60 484 ₽/м2",
         "color": {
             "img": "assets/imgs/katalogGroup/covrolins/brown.png",
             "color": "Коричневый"
@@ -80,104 +85,14 @@
             "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
             "country": "Германия"
         },
-        "collection": "mocheta comerciala DAKAR 2082",
+        "collection": "mocheta comerciala DAKAR",
         "coatingType": "Коммерческий",
-        "roomType": ["Гостиницы", "Кинотеатры и театры", "Офисы", "Рестораны", "клубы"],
-        "drawingType": "Не однотонный",
-        "applications": "33",
-        "packagingType": "Полиэтилен",
-        "ServiceLife": "10 лет",
-        "formSale": "Рулон",
-        "unitMeasurement": "м²",
-        "hegiht": "6 мм",
-        "width": "4 м",
-        "pileType": "Велюр",
-        "totalWeight": "1730 г/м²",
-        "rollWeight": "173 кг",
-        "base": "Джут",
-        "pileHeight": "3",
-        "pileComposition": "Полиамид",
-        "img":"assets/imgs/katalogGroup/covrolins/covrolin3.png"
-    },
-    {
-        "id": "43104",
-        "sum":"60 484 ₽/м2",
-        "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
-        "color": {
-            "img": "assets/imgs/katalogGroup/covrolins/brown.png",
-            "color": "Коричневый"
-        },
-        "country": {
-            "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
-            "country": "Германия"
-        },
-        "collection": "Harmony 0238 green beige Harmony",
-        "coatingType": "Коммерческий",
-        "roomType": ["Гостиницы", "Кинотеатры и театры", "Офисы", "Рестораны", "клубы"
-        ],
-        "drawingType": "Не однотонный",
-        "applications": "33",
-        "packagingType": "Полиэтилен",
-        "ServiceLife": "10 лет",
-        "formSale": "Рулон",
-        "unitMeasurement": "м²",
-        "hegiht": "6 мм",
-        "width": "4 м",
-        "pileType": "Велюр",
-        "totalWeight": "1730 г/м²",
-        "rollWeight": "173 кг",
-        "base": "Джут",
-        "pileHeight": 3,
-        "pileComposition": "Полиамид",
-        "img":"assets/imgs/katalogGroup/covrolins/covrolin4.png"
-    },
-    {
-        "id": "43104",
-        "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
-        "sum":"60 484 ₽/м2",
-        "color": {
-            "img": "assets/imgs/katalogGroup/covrolins/brown.png",
-            "color": "Коричневый"
-        },
-        "country": {
-            "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
-            "country": "Германия"
-        },
-        "collection": "Country no-p 0600",
-        "coatingType": "Коммерческий",
-        "roomType": ["Гостиницы", "Кинотеатры и театры", "Офисы", "Рестораны", "клубы"
-        ],
-        "drawingType": "Не однотонный",
-        "applications": "33",
-        "packagingType": "Полиэтилен",
-        "ServiceLife": "10 лет",
-        "formSale": "Рулон",
-        "unitMeasurement": "м²",
-        "hegiht": "6 мм",
-        "width": "4 м",
-        "pileType": "Велюр",
-        "totalWeight": "1730 г/м²",
-        "rollWeight": "173 кг",
-        "base": "Джут",
-        "pileHeight": 3,
-        "pileComposition": "Полиамид",
-        "img":"assets/imgs/katalogGroup/covrolins/covrolin5.png"
-    },
-    {
-        "id": "43104",
-        "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
-        "sum":"60 484 ₽/м2",
-        "color": {
-            "img": "assets/imgs/katalogGroup/covrolins/brown.png",
-            "color": "Коричневый"
-        },
-        "country": {
-            "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
-            "country": "Германия"
-        },
-        "collection": "Country no-p 0600",
-        "coatingType": "Коммерческий",
-        "roomType": ["Гостиницы", "Кинотеатры и театры", "Офисы", "Рестораны", "клубы"
+        "roomType": [
+            "Гостиницы",
+            "Кинотеатры и театры",
+            "Офисы",
+            "Рестораны",
+            "клубы"
         ],
         "drawingType": "Не однотонный",
         "applications": "33",
@@ -193,7 +108,118 @@
         "base": "Джут",
         "pileHeight": "3",
         "pileComposition": "Полиамид",
-        "img":"assets/imgs/katalogGroup/covrolins/covrolin6.png"
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin3.png"
+    },
+    {
+        "id": "43104",
+        "sum": "60 484 ₽/м2",
+        "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
+        "color": {
+            "img": "assets/imgs/katalogGroup/covrolins/brown.png",
+            "color": "Коричневый"
+        },
+        "country": {
+            "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
+            "country": "Германия"
+        },
+        "collection": "Harmony 0238 green beige",
+        "coatingType": "Коммерческий",
+        "roomType": [
+            "Гостиницы",
+            "Кинотеатры и театры",
+            "Офисы",
+            "Рестораны",
+            "клубы"
+        ],
+        "drawingType": "Не однотонный",
+        "applications": "33",
+        "packagingType": "Полиэтилен",
+        "ServiceLife": "10 лет",
+        "formSale": "Рулон",
+        "unitMeasurement": "м²",
+        "hegiht": "6 мм",
+        "width": "4 м",
+        "pileType": "Велюр",
+        "totalWeight": "1730 г/м²",
+        "rollWeight": "173 кг",
+        "base": "Джут",
+        "pileHeight": 3,
+        "pileComposition": "Полиамид",
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin4.png"
+    },
+    {
+        "id": "43104",
+        "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
+        "sum": "60 484 ₽/м2",
+        "color": {
+            "img": "assets/imgs/katalogGroup/covrolins/brown.png",
+            "color": "Коричневый"
+        },
+        "country": {
+            "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
+            "country": "Германия"
+        },
+        "collection": "Country no-p 0600",
+        "coatingType": "Коммерческий",
+        "roomType": [
+            "Гостиницы",
+            "Кинотеатры и театры",
+            "Офисы",
+            "Рестораны",
+            "клубы"
+        ],
+        "drawingType": "Не однотонный",
+        "applications": "33",
+        "packagingType": "Полиэтилен",
+        "ServiceLife": "10 лет",
+        "formSale": "Рулон",
+        "unitMeasurement": "м²",
+        "hegiht": "6 мм",
+        "width": "4 м",
+        "pileType": "Велюр",
+        "totalWeight": "1730 г/м²",
+        "rollWeight": "173 кг",
+        "base": "Джут",
+        "pileHeight": 3,
+        "pileComposition": "Полиамид",
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin5.png"
+    },
+    {
+        "id": "43104",
+        "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
+        "sum": "60 484 ₽/м2",
+        "color": {
+            "img": "assets/imgs/katalogGroup/covrolins/brown.png",
+            "color": "Коричневый"
+        },
+        "country": {
+            "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
+            "country": "Германия"
+        },
+        "collection": "Country no-p 0600",
+        "coatingType": "Коммерческий",
+        "roomType": [
+            "Гостиницы",
+            "Кинотеатры и театры",
+            "Офисы",
+            "Рестораны",
+            "клубы"
+        ],
+        "drawingType": "Не однотонный",
+        "applications": "33",
+        "packagingType": "Полиэтилен",
+        "ServiceLife": "10 лет",
+        "formSale": "Рулон",
+        "unitMeasurement": "м²",
+        "hegiht": "6 мм",
+        "width": "4 м",
+        "pileType": "Велюр",
+        "totalWeight": "1730 г/м²",
+        "rollWeight": "173 кг",
+        "base": "Джут",
+        "pileHeight": "3",
+        "pileComposition": "Полиамид",
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin6.png"
     },
     {
         "id": "43104",
@@ -230,11 +256,11 @@
         "base": "Джут",
         "pileHeight": "3",
         "pileComposition": "Полиамид",
-        "img":"assets/imgs/katalogGroup/covrolins/covrolin1.png"
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin1.png"
     },
     {
         "id": 43104,
-        "sum":"60 484 ₽/м2",
+        "sum": "60 484 ₽/м2",
         "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
         "color": {
             "img": "assets/imgs/katalogGroup/covrolins/brown.png",
@@ -244,9 +270,14 @@
             "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
             "country": "Германия"
         },
-        "collection": "DECK CARPET CAVROLIN SOCOVENA & MAPLA VENUS",
+        "collection": "DECK CARPET CAVROLIN",
         "coatingType": "Коммерческий",
-        "roomType": ["Гостиницы", "Кинотеатры и театры", "Офисы", "Рестораны", "клубы"
+        "roomType": [
+            "Гостиницы",
+            "Кинотеатры и театры",
+            "Офисы",
+            "Рестораны",
+            "клубы"
         ],
         "drawingType": "Не однотонный",
         "applications": 33,
@@ -262,12 +293,12 @@
         "base": "Джут",
         "pileHeight": 3,
         "pileComposition": "Полиамид",
-        "img":"assets/imgs/katalogGroup/covrolins/covrolin2.png"
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin2.png"
     },
     {
         "id": 43104,
         "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
-        "sum":"60 484 ₽/м2",
+        "sum": "60 484 ₽/м2",
         "color": {
             "img": "assets/imgs/katalogGroup/covrolins/brown.png",
             "color": "Коричневый"
@@ -276,9 +307,15 @@
             "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
             "country": "Германия"
         },
-        "collection": "mocheta comerciala DAKAR 2082",
+        "collection": "mocheta comerciala DAKAR",
         "coatingType": "Коммерческий",
-        "roomType": ["Гостиницы", "Кинотеатры и театры", "Офисы", "Рестораны", "клубы"],
+        "roomType": [
+            "Гостиницы",
+            "Кинотеатры и театры",
+            "Офисы",
+            "Рестораны",
+            "клубы"
+        ],
         "drawingType": "Не однотонный",
         "applications": "33",
         "packagingType": "Полиэтилен",
@@ -293,11 +330,11 @@
         "base": "Джут",
         "pileHeight": "3",
         "pileComposition": "Полиамид",
-        "img":"assets/imgs/katalogGroup/covrolins/covrolin3.png"
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin3.png"
     },
     {
         "id": "43104",
-        "sum":"60 484 ₽/м2",
+        "sum": "60 484 ₽/м2",
         "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
         "color": {
             "img": "assets/imgs/katalogGroup/covrolins/brown.png",
@@ -307,9 +344,14 @@
             "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
             "country": "Германия"
         },
-        "collection": "Harmony 0238 green beige Harmony",
+        "collection": "Harmony 0238 green beige",
         "coatingType": "Коммерческий",
-        "roomType": ["Гостиницы", "Кинотеатры и театры", "Офисы", "Рестораны", "клубы"
+        "roomType": [
+            "Гостиницы",
+            "Кинотеатры и театры",
+            "Офисы",
+            "Рестораны",
+            "клубы"
         ],
         "drawingType": "Не однотонный",
         "applications": "33",
@@ -325,12 +367,12 @@
         "base": "Джут",
         "pileHeight": 3,
         "pileComposition": "Полиамид",
-        "img":"assets/imgs/katalogGroup/covrolins/covrolin4.png"
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin4.png"
     },
     {
         "id": "43104",
         "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
-        "sum":"60 484 ₽/м2",
+        "sum": "60 484 ₽/м2",
         "color": {
             "img": "assets/imgs/katalogGroup/covrolins/brown.png",
             "color": "Коричневый"
@@ -341,7 +383,12 @@
         },
         "collection": "Country no-p 0600",
         "coatingType": "Коммерческий",
-        "roomType": ["Гостиницы", "Кинотеатры и театры", "Офисы", "Рестораны", "клубы"
+        "roomType": [
+            "Гостиницы",
+            "Кинотеатры и театры",
+            "Офисы",
+            "Рестораны",
+            "клубы"
         ],
         "drawingType": "Не однотонный",
         "applications": "33",
@@ -357,7 +404,7 @@
         "base": "Джут",
         "pileHeight": "3",
         "pileComposition": "Полиамид",
-        "img":"assets/imgs/katalogGroup/covrolins/covrolin6.png"
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin6.png"
     },
     {
         "id": "43104",
@@ -394,11 +441,11 @@
         "base": "Джут",
         "pileHeight": "3",
         "pileComposition": "Полиамид",
-        "img":"assets/imgs/katalogGroup/covrolins/covrolin1.png"
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin1.png"
     },
     {
         "id": 43104,
-        "sum":"60 484 ₽/м2",
+        "sum": "60 484 ₽/м2",
         "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
         "color": {
             "img": "assets/imgs/katalogGroup/covrolins/brown.png",
@@ -408,9 +455,14 @@
             "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
             "country": "Германия"
         },
-        "collection": "DECK CARPET CAVROLIN SOCOVENA & MAPLA VENUS",
+        "collection": "DECK CARPET CAVROLIN",
         "coatingType": "Коммерческий",
-        "roomType": ["Гостиницы", "Кинотеатры и театры", "Офисы", "Рестораны", "клубы"
+        "roomType": [
+            "Гостиницы",
+            "Кинотеатры и театры",
+            "Офисы",
+            "Рестораны",
+            "клубы"
         ],
         "drawingType": "Не однотонный",
         "applications": 33,
@@ -426,12 +478,12 @@
         "base": "Джут",
         "pileHeight": 3,
         "pileComposition": "Полиамид",
-        "img":"assets/imgs/katalogGroup/covrolins/covrolin2.png"
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin2.png"
     },
     {
         "id": 43104,
         "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
-        "sum":"60 484 ₽/м2",
+        "sum": "60 484 ₽/м2",
         "color": {
             "img": "assets/imgs/katalogGroup/covrolins/brown.png",
             "color": "Коричневый"
@@ -440,9 +492,15 @@
             "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
             "country": "Германия"
         },
-        "collection": "mocheta comerciala DAKAR 2082",
+        "collection": "mocheta comerciala DAKAR",
         "coatingType": "Коммерческий",
-        "roomType": ["Гостиницы", "Кинотеатры и театры", "Офисы", "Рестораны", "клубы"],
+        "roomType": [
+            "Гостиницы",
+            "Кинотеатры и театры",
+            "Офисы",
+            "Рестораны",
+            "клубы"
+        ],
         "drawingType": "Не однотонный",
         "applications": "33",
         "packagingType": "Полиэтилен",
@@ -457,6 +515,524 @@
         "base": "Джут",
         "pileHeight": "3",
         "pileComposition": "Полиамид",
-        "img":"assets/imgs/katalogGroup/covrolins/covrolin3.png"
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin3.png"
+    },
+    {
+        "id": "43104",
+        "sum": "60 484 ₽/м2",
+        "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
+        "color": {
+            "img": "assets/imgs/katalogGroup/covrolins/brown.png",
+            "color": "Коричневый"
+        },
+        "country": {
+            "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
+            "country": "Германия"
+        },
+        "collection": "BESMER Palatino",
+        "coatingType": "Коммерческий",
+        "roomType": [
+            "Гостиницы",
+            "Кинотеатры и театры",
+            "Офисы",
+            "Рестораны",
+            "клубы"
+        ],
+        "drawingType": "Не однотонный",
+        "applications": "33",
+        "packagingType": "Полиэтилен",
+        "ServiceLife": "10 лет",
+        "formSale": "Рулон",
+        "unitMeasurement": "м²",
+        "hegiht": "6 мм",
+        "width": "4 м",
+        "pileType": "Велюр",
+        "totalWeight": "1730 г/м²",
+        "rollWeight": "173 кг",
+        "base": "Джут",
+        "pileHeight": "3",
+        "pileComposition": "Полиамид",
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin1.png"
+    },
+    {
+        "id": 43104,
+        "sum": "60 484 ₽/м2",
+        "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
+        "color": {
+            "img": "assets/imgs/katalogGroup/covrolins/brown.png",
+            "color": "Коричневый"
+        },
+        "country": {
+            "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
+            "country": "Германия"
+        },
+        "collection": "DECK CARPET CAVROLIN",
+        "coatingType": "Коммерческий",
+        "roomType": [
+            "Гостиницы",
+            "Кинотеатры и театры",
+            "Офисы",
+            "Рестораны",
+            "клубы"
+        ],
+        "drawingType": "Не однотонный",
+        "applications": 33,
+        "packagingType": "Полиэтилен",
+        "ServiceLife": "10 лет",
+        "formSale": "Рулон",
+        "unitMeasurement": "м²",
+        "hegiht": "6 мм",
+        "width": "4 м",
+        "pileType": "Велюр",
+        "totalWeight": "1730 г/м²",
+        "rollWeight": "173 кг",
+        "base": "Джут",
+        "pileHeight": 3,
+        "pileComposition": "Полиамид",
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin2.png"
+    },
+    {
+        "id": 43104,
+        "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
+        "sum": "60 484 ₽/м2",
+        "color": {
+            "img": "assets/imgs/katalogGroup/covrolins/brown.png",
+            "color": "Коричневый"
+        },
+        "country": {
+            "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
+            "country": "Германия"
+        },
+        "collection": "mocheta comerciala DAKAR",
+        "coatingType": "Коммерческий",
+        "roomType": [
+            "Гостиницы",
+            "Кинотеатры и театры",
+            "Офисы",
+            "Рестораны",
+            "клубы"
+        ],
+        "drawingType": "Не однотонный",
+        "applications": "33",
+        "packagingType": "Полиэтилен",
+        "ServiceLife": "10 лет",
+        "formSale": "Рулон",
+        "unitMeasurement": "м²",
+        "hegiht": "6 мм",
+        "width": "4 м",
+        "pileType": "Велюр",
+        "totalWeight": "1730 г/м²",
+        "rollWeight": "173 кг",
+        "base": "Джут",
+        "pileHeight": "3",
+        "pileComposition": "Полиамид",
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin3.png"
+    },
+    {
+        "id": "43104",
+        "sum": "60 484 ₽/м2",
+        "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
+        "color": {
+            "img": "assets/imgs/katalogGroup/covrolins/brown.png",
+            "color": "Коричневый"
+        },
+        "country": {
+            "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
+            "country": "Германия"
+        },
+        "collection": "Harmony 0238 green beige",
+        "coatingType": "Коммерческий",
+        "roomType": [
+            "Гостиницы",
+            "Кинотеатры и театры",
+            "Офисы",
+            "Рестораны",
+            "клубы"
+        ],
+        "drawingType": "Не однотонный",
+        "applications": "33",
+        "packagingType": "Полиэтилен",
+        "ServiceLife": "10 лет",
+        "formSale": "Рулон",
+        "unitMeasurement": "м²",
+        "hegiht": "6 мм",
+        "width": "4 м",
+        "pileType": "Велюр",
+        "totalWeight": "1730 г/м²",
+        "rollWeight": "173 кг",
+        "base": "Джут",
+        "pileHeight": 3,
+        "pileComposition": "Полиамид",
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin4.png"
+    },
+    {
+        "id": "43104",
+        "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
+        "sum": "60 484 ₽/м2",
+        "color": {
+            "img": "assets/imgs/katalogGroup/covrolins/brown.png",
+            "color": "Коричневый"
+        },
+        "country": {
+            "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
+            "country": "Германия"
+        },
+        "collection": "Country no-p 0600",
+        "coatingType": "Коммерческий",
+        "roomType": [
+            "Гостиницы",
+            "Кинотеатры и театры",
+            "Офисы",
+            "Рестораны",
+            "клубы"
+        ],
+        "drawingType": "Не однотонный",
+        "applications": "33",
+        "packagingType": "Полиэтилен",
+        "ServiceLife": "10 лет",
+        "formSale": "Рулон",
+        "unitMeasurement": "м²",
+        "hegiht": "6 мм",
+        "width": "4 м",
+        "pileType": "Велюр",
+        "totalWeight": "1730 г/м²",
+        "rollWeight": "173 кг",
+        "base": "Джут",
+        "pileHeight": 3,
+        "pileComposition": "Полиамид",
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin5.png"
+    },
+    {
+        "id": "43104",
+        "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
+        "sum": "60 484 ₽/м2",
+        "color": {
+            "img": "assets/imgs/katalogGroup/covrolins/brown.png",
+            "color": "Коричневый"
+        },
+        "country": {
+            "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
+            "country": "Германия"
+        },
+        "collection": "Country no-p 0600",
+        "coatingType": "Коммерческий",
+        "roomType": [
+            "Гостиницы",
+            "Кинотеатры и театры",
+            "Офисы",
+            "Рестораны",
+            "клубы"
+        ],
+        "drawingType": "Не однотонный",
+        "applications": "33",
+        "packagingType": "Полиэтилен",
+        "ServiceLife": "10 лет",
+        "formSale": "Рулон",
+        "unitMeasurement": "м²",
+        "hegiht": "6 мм",
+        "width": "4 м",
+        "pileType": "Велюр",
+        "totalWeight": "1730 г/м²",
+        "rollWeight": "173 кг",
+        "base": "Джут",
+        "pileHeight": "3",
+        "pileComposition": "Полиамид",
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin6.png"
+    },
+    {
+        "id": "43104",
+        "sum": "60 484 ₽/м2",
+        "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
+        "color": {
+            "img": "assets/imgs/katalogGroup/covrolins/brown.png",
+            "color": "Коричневый"
+        },
+        "country": {
+            "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
+            "country": "Германия"
+        },
+        "collection": "BESMER Palatino",
+        "coatingType": "Коммерческий",
+        "roomType": [
+            "Гостиницы",
+            "Кинотеатры и театры",
+            "Офисы",
+            "Рестораны",
+            "клубы"
+        ],
+        "drawingType": "Не однотонный",
+        "applications": "33",
+        "packagingType": "Полиэтилен",
+        "ServiceLife": "10 лет",
+        "formSale": "Рулон",
+        "unitMeasurement": "м²",
+        "hegiht": "6 мм",
+        "width": "4 м",
+        "pileType": "Велюр",
+        "totalWeight": "1730 г/м²",
+        "rollWeight": "173 кг",
+        "base": "Джут",
+        "pileHeight": "3",
+        "pileComposition": "Полиамид",
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin1.png"
+    },
+    {
+        "id": 43104,
+        "sum": "60 484 ₽/м2",
+        "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
+        "color": {
+            "img": "assets/imgs/katalogGroup/covrolins/brown.png",
+            "color": "Коричневый"
+        },
+        "country": {
+            "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
+            "country": "Германия"
+        },
+        "collection": "DECK CARPET CAVROLIN",
+        "coatingType": "Коммерческий",
+        "roomType": [
+            "Гостиницы",
+            "Кинотеатры и театры",
+            "Офисы",
+            "Рестораны",
+            "клубы"
+        ],
+        "drawingType": "Не однотонный",
+        "applications": 33,
+        "packagingType": "Полиэтилен",
+        "ServiceLife": "10 лет",
+        "formSale": "Рулон",
+        "unitMeasurement": "м²",
+        "hegiht": "6 мм",
+        "width": "4 м",
+        "pileType": "Велюр",
+        "totalWeight": "1730 г/м²",
+        "rollWeight": "173 кг",
+        "base": "Джут",
+        "pileHeight": 3,
+        "pileComposition": "Полиамид",
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin2.png"
+    },
+    {
+        "id": 43104,
+        "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
+        "sum": "60 484 ₽/м2",
+        "color": {
+            "img": "assets/imgs/katalogGroup/covrolins/brown.png",
+            "color": "Коричневый"
+        },
+        "country": {
+            "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
+            "country": "Германия"
+        },
+        "collection": "mocheta comerciala DAKAR",
+        "coatingType": "Коммерческий",
+        "roomType": [
+            "Гостиницы",
+            "Кинотеатры и театры",
+            "Офисы",
+            "Рестораны",
+            "клубы"
+        ],
+        "drawingType": "Не однотонный",
+        "applications": "33",
+        "packagingType": "Полиэтилен",
+        "ServiceLife": "10 лет",
+        "formSale": "Рулон",
+        "unitMeasurement": "м²",
+        "hegiht": "6 мм",
+        "width": "4 м",
+        "pileType": "Велюр",
+        "totalWeight": "1730 г/м²",
+        "rollWeight": "173 кг",
+        "base": "Джут",
+        "pileHeight": "3",
+        "pileComposition": "Полиамид",
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin3.png"
+    },
+    {
+        "id": "43104",
+        "sum": "60 484 ₽/м2",
+        "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
+        "color": {
+            "img": "assets/imgs/katalogGroup/covrolins/brown.png",
+            "color": "Коричневый"
+        },
+        "country": {
+            "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
+            "country": "Германия"
+        },
+        "collection": "Harmony 0238 green beige",
+        "coatingType": "Коммерческий",
+        "roomType": [
+            "Гостиницы",
+            "Кинотеатры и театры",
+            "Офисы",
+            "Рестораны",
+            "клубы"
+        ],
+        "drawingType": "Не однотонный",
+        "applications": "33",
+        "packagingType": "Полиэтилен",
+        "ServiceLife": "10 лет",
+        "formSale": "Рулон",
+        "unitMeasurement": "м²",
+        "hegiht": "6 мм",
+        "width": "4 м",
+        "pileType": "Велюр",
+        "totalWeight": "1730 г/м²",
+        "rollWeight": "173 кг",
+        "base": "Джут",
+        "pileHeight": 3,
+        "pileComposition": "Полиамид",
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin4.png"
+    },
+    {
+        "id": "43104",
+        "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
+        "sum": "60 484 ₽/м2",
+        "color": {
+            "img": "assets/imgs/katalogGroup/covrolins/brown.png",
+            "color": "Коричневый"
+        },
+        "country": {
+            "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
+            "country": "Германия"
+        },
+        "collection": "Country no-p 0600",
+        "coatingType": "Коммерческий",
+        "roomType": [
+            "Гостиницы",
+            "Кинотеатры и театры",
+            "Офисы",
+            "Рестораны",
+            "клубы"
+        ],
+        "drawingType": "Не однотонный",
+        "applications": "33",
+        "packagingType": "Полиэтилен",
+        "ServiceLife": "10 лет",
+        "formSale": "Рулон",
+        "unitMeasurement": "м²",
+        "hegiht": "6 мм",
+        "width": "4 м",
+        "pileType": "Велюр",
+        "totalWeight": "1730 г/м²",
+        "rollWeight": "173 кг",
+        "base": "Джут",
+        "pileHeight": "3",
+        "pileComposition": "Полиамид",
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin6.png"
+    },
+    {
+        "id": "43104",
+        "sum": "60 484 ₽/м2",
+        "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
+        "color": {
+            "img": "assets/imgs/katalogGroup/covrolins/brown.png",
+            "color": "Коричневый"
+        },
+        "country": {
+            "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
+            "country": "Германия"
+        },
+        "collection": "BESMER Palatino",
+        "coatingType": "Коммерческий",
+        "roomType": [
+            "Гостиницы",
+            "Кинотеатры и театры",
+            "Офисы",
+            "Рестораны",
+            "клубы"
+        ],
+        "drawingType": "Не однотонный",
+        "applications": "33",
+        "packagingType": "Полиэтилен",
+        "ServiceLife": "10 лет",
+        "formSale": "Рулон",
+        "unitMeasurement": "м²",
+        "hegiht": "6 мм",
+        "width": "4 м",
+        "pileType": "Велюр",
+        "totalWeight": "1730 г/м²",
+        "rollWeight": "173 кг",
+        "base": "Джут",
+        "pileHeight": "3",
+        "pileComposition": "Полиамид",
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin1.png"
+    },
+    {
+        "id": 43104,
+        "sum": "60 484 ₽/м2",
+        "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
+        "color": {
+            "img": "assets/imgs/katalogGroup/covrolins/brown.png",
+            "color": "Коричневый"
+        },
+        "country": {
+            "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
+            "country": "Германия"
+        },
+        "collection": "DECK CARPET CAVROLIN",
+        "coatingType": "Коммерческий",
+        "roomType": [
+            "Гостиницы",
+            "Кинотеатры и театры",
+            "Офисы",
+            "Рестораны",
+            "клубы"
+        ],
+        "drawingType": "Не однотонный",
+        "applications": 33,
+        "packagingType": "Полиэтилен",
+        "ServiceLife": "10 лет",
+        "formSale": "Рулон",
+        "unitMeasurement": "м²",
+        "hegiht": "6 мм",
+        "width": "4 м",
+        "pileType": "Велюр",
+        "totalWeight": "1730 г/м²",
+        "rollWeight": "173 кг",
+        "base": "Джут",
+        "pileHeight": 3,
+        "pileComposition": "Полиамид",
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin2.png"
+    },
+    {
+        "id": 43104,
+        "brand": "assets/imgs/katalogGroup/covrolins/besmer.png",
+        "sum": "60 484 ₽/м2",
+        "color": {
+            "img": "assets/imgs/katalogGroup/covrolins/brown.png",
+            "color": "Коричневый"
+        },
+        "country": {
+            "flag": "assets/imgs/katalogGroup/covrolins/DE.png",
+            "country": "Германия"
+        },
+        "collection": "mocheta comerciala DAKAR",
+        "coatingType": "Коммерческий",
+        "roomType": [
+            "Гостиницы",
+            "Кинотеатры и театры",
+            "Офисы",
+            "Рестораны",
+            "клубы"
+        ],
+        "drawingType": "Не однотонный",
+        "applications": "33",
+        "packagingType": "Полиэтилен",
+        "ServiceLife": "10 лет",
+        "formSale": "Рулон",
+        "unitMeasurement": "м²",
+        "hegiht": "6 мм",
+        "width": "4 м",
+        "pileType": "Велюр",
+        "totalWeight": "1730 г/м²",
+        "rollWeight": "173 кг",
+        "base": "Джут",
+        "pileHeight": "3",
+        "pileComposition": "Полиамид",
+        "img": "assets/imgs/katalogGroup/covrolins/covrolin3.png"
     }
 ]

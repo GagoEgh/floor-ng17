@@ -1,17 +1,25 @@
 <section class="covrolin">
+    <div class="img-eye">
+        <div class="eye"></div>
+    </div>
+    <div class="img-star">
+        <div class="star"></div>
+    </div>
+    
     <img class="covrolin-img" [src]="covrolin?.img">
+
     <div class="covrolin-about">
         <div class="covrolin-block">
-            <p>#{{covrolin?.id}}</p>
+            <p>#{{covrolin.id}}</p>
             <img [src]="covrolin?.country?.flag" class="flag">
         </div>
         <h4 class="title">Ковролин {{covrolin?.collection}}</h4>
-        <p>Высота ворса: {{covrolin?.pileHeight}}мм</p>
+        <p>Высота ворса: {{covrolin.pileHeight}}мм</p>
         <div class="covrolin-block">
-            <p>Класс применения: {{covrolin?.applications}}</p>
-            <p class="sum">{{covrolin?.sum}}</p>
+            <p>Класс применения: {{covrolin.applications}}</p>
+            <p class="sum">{{covrolin.sum}}</p>
         </div>
-        <p>Состав ворса: {{covrolin?.pileComposition}}</p>
+        <p>Состав ворса: {{covrolin.pileComposition}}</p>
 
         <div class="sel-btns">
             <div class="back">

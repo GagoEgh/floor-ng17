@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ICovrolin } from '../../../types/covfolin.interface';
 
@@ -10,7 +10,7 @@ import { ICovrolin } from '../../../types/covfolin.interface';
   styleUrl: './covrolin.component.scss'
 })
 export class CovrolinComponent {
-
+  eye = signal('assets/imgs/katalogGroup/covrolins/eye.png')
   @Input()covrolin!:ICovrolin;
 
 }
