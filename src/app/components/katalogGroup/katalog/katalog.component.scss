@@ -1,4 +1,5 @@
-
+@import '../../../../assets/scss/mixins.scss';
+@import '../../../../assets/scss/variable.scss';
 
 .container {
 
@@ -8,7 +9,6 @@
     font-size: 50px;
     font-weight: 700;
     line-height: 87.675px;
-    /* 175.349% */
   }
 
   .block {
@@ -16,6 +16,7 @@
     display: grid;
     grid-template-columns: repeat(2, 20% 80%);
     gap: 15px;
+    margin-bottom: 30px;
 
     .bar {
       border: 1px solid;
@@ -42,18 +43,60 @@
         gap: 15px 20px;
 
       }
+
+      .page {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+
+        .pagination {
+          display: flex;
+          justify-content: space-between;
+
+          .left {
+            @include vector($left)
+          }
+
+
+          .right {
+            @include vector($right);
+          }
+
+          .pagination-btn {
+            padding: 10px;
+            border: none;
+            margin: 0 7px;
+            background: transparent;
+            border-bottom: 1px solid #C68F4E;
+          }
+
+          .activ {
+            padding: 10px;
+            border: none;
+            margin: 0 7px;
+            background: transparent;
+            border: 1px solid #C68F4E;
+          }
+
+        }
+
+        .pagination,
+        .size,
+        .goToPage {
+          font-size: 16px;
+          font-weight: 500;
+          color: #666666;
+        }
+
+        .goToPage {
+
+          .page-input {
+            width: 60px;
+            height: 30px;
+            margin-left: 10px;
+          }
+        }
+      }
     }
   }
 }
-
-
-.block1 {
-  background-color: green;
-  border: 1px solid;
-}
-
-.block2 {
-  background-color: goldenrod;
-  border: 1px solid;
-}
-
