@@ -1,3 +1,4 @@
-export interface Pagination {
-    page: number
+export interface IPagination {
+  count: number[],
+  page: number
   }

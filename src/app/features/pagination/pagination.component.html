@@ -1,6 +1,6 @@
 <div class="pagination">
     <div class="left" (click)="previous()"></div>
-    @for(page of pageCount(); track page; let i = $index){
+    @for(page of pagination().count; track page; let i = $index){
      <button [class.activ]="i==pagination().page-1" class="pagination-btn"
         (click)="goToNumberPage(i+1)">{{i+1}}</button>
 

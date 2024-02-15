@@ -1,4 +1,4 @@
-import { Component, OnInit, Signal, inject} from '@angular/core';
+import { Component, OnInit, Signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ICovrolin } from '../../../types/covfolin.interface';
 import { MenuService } from '../../../apis/menu.service';

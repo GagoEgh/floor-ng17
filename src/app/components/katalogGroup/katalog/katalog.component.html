@@ -20,16 +20,6 @@
                 </div>
                 <app-pagination [covrolins]="covrolins" 
                 (covrolinsChange)="goToPage($event)"></app-pagination>
-                <!-- <div class="pagination">
-                    <div class="left" (click)="previous()"></div>
-                    @for(page of pageCount(); track page; let i = $index){
-
-                     <button [class.activ]="i==pageination().page-1" class="pagination-btn"
-                        (click)="goToNumberPage(i+1)">{{i+1}}</button>
-
-                    }
-                    <div class="right" (click)="next()"></div>
-                </div> -->
                 <div class="goToPage">
                     <label>Перейти на страницу</label>
                     <input class='page-input' type="text">

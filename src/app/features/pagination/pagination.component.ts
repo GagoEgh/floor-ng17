@@ -1,7 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output, Signal, WritableSignal, computed, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Pagination } from '../../types/pagination.interface';
+import { IPagination } from '../../types/pagination.interface';
 import { ICovrolin } from '../../types/covfolin.interface';
+
 
 @Component({
   selector: 'app-pagination',
@@ -11,15 +12,19 @@ import { ICovrolin } from '../../types/covfolin.interface';
   styleUrl: './pagination.component.scss'
 })
 export class PaginationComponent implements OnInit {
+
+  pagination: WritableSignal<IPagination> = signal({
+    count: [],
+    page: 0
+  })
+
   ngOnInit(): void {
-    this.pageCount = signal(new Array(this.pageLength()));
-    this.goToNumberPage(1) 
+    this.pagination().count = new Array(this.pageLength());
+    console.log(this.pagination().count)
+    this.goToNumberPage(1);
   }
-  pageCount!: Signal<Array<any>>;
-  pagination: WritableSignal<Pagination> = signal({ page: 0 });
 
-
-  @Input({required:true}) covrolins!: Signal<ICovrolin[] | undefined>;
+  @Input({ required: true }) covrolins!: Signal<ICovrolin[] | undefined>;
   @Output() covrolinsChange = new EventEmitter()
 
   private pageLength(): number {
@@ -27,7 +32,7 @@ export class PaginationComponent implements OnInit {
   }
 
   private updatePage(index: number) {
-    this.pagination.update((p: Pagination) => ({ page: index }));
+    this.pagination.set({ ...this.pagination(), page: index })
   }
 
   goToNumberPage(index: number) {
@@ -42,19 +47,20 @@ export class PaginationComponent implements OnInit {
 
   previous() {
     this.pagination().page--;
-    if (this.pagination().page === 0) {
+    if(this.pagination().page ===0){
       this.pagination().page = this.pageLength()
     }
+
     this.goToNumberPage(this.pagination().page)
 
   }
 
   next() {
     this.pagination().page++;
-    if (this.pagination().page > this.pageLength()) {
-      this.pagination().page = 1
+    if(this.pagination().page>this.pageLength()){
+      this.pagination().page =1;
     }
-    this.goToNumberPage(this.pagination().page);
+    this.goToNumberPage(this.pagination().page)
 
   }
 
