@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { KatalogComponent } from '../../dashboardGroup/katalog/katalog.component';
 
-import { KatalogComponent } from './katalog.component';
+// import { KatalogComponent } from './katalog.component';
 
 describe('KatalogComponent', () => {
   let component: KatalogComponent;

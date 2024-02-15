@@ -18,7 +18,9 @@
                 <div class="size">
                     Всего {{ covrolins().length}} товара (-ов)
                 </div>
-                <div class="pagination">
+                <app-pagination [covrolins]="covrolins" 
+                (covrolinsChange)="goToPage($event)"></app-pagination>
+                <!-- <div class="pagination">
                     <div class="left" (click)="previous()"></div>
                     @for(page of pageCount(); track page; let i = $index){
 
@@ -27,7 +29,7 @@
 
                     }
                     <div class="right" (click)="next()"></div>
-                </div>
+                </div> -->
                 <div class="goToPage">
                     <label>Перейти на страницу</label>
                     <input class='page-input' type="text">

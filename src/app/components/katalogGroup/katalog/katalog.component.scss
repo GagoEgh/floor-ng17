@@ -49,53 +49,14 @@
         display: flex;
         justify-content: space-between;
 
-        .pagination {
-          display: flex;
-          justify-content: space-between;
-
-          .left {
-            @include vector($left)
-          }
-
-
-          .right {
-            @include vector($right);
-          }
-
-          .pagination-btn {
-            padding: 10px;
-            border: none;
-            margin: 0 7px;
-            background: transparent;
-            border-bottom: 1px solid #C68F4E;
-          }
-
-          .activ {
-            padding: 10px;
-            border: none;
-            margin: 0 7px;
-            background: transparent;
-            border: 1px solid #C68F4E;
-          }
-
-        }
-
-        .pagination,
-        .size,
-        .goToPage {
+     
+    
+        .size{
           font-size: 16px;
           font-weight: 500;
           color: #666666;
         }
 
-        .goToPage {
-
-          .page-input {
-            width: 60px;
-            height: 30px;
-            margin-left: 10px;
-          }
-        }
       }
     }
   }
