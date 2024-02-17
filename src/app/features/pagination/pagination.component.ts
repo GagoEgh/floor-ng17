@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output, Signal, WritableSignal,
 import { CommonModule } from '@angular/common';
 import { IPagination } from '../../types/pagination.interface';
 import { ICovrolin } from '../../types/covfolin.interface';
+import { BehaviorSubject, debounceTime } from 'rxjs';
 
 
 @Component({
@@ -20,7 +21,6 @@ export class PaginationComponent implements OnInit {
 
   ngOnInit(): void {
     this.pagination().count = new Array(this.pageLength());
-    console.log(this.pagination().count)
     this.goToNumberPage(1);
   }
 
@@ -32,7 +32,7 @@ export class PaginationComponent implements OnInit {
   }
 
   private updatePage(index: number) {
-    this.pagination.set({ ...this.pagination(), page: index })
+    this.pagination.update((p: IPagination) => ({ ...this.pagination(), page: index }))
   }
 
   goToNumberPage(index: number) {
@@ -47,7 +47,7 @@ export class PaginationComponent implements OnInit {
 
   previous() {
     this.pagination().page--;
-    if(this.pagination().page ===0){
+    if (this.pagination().page === 0) {
       this.pagination().page = this.pageLength()
     }
 
@@ -57,11 +57,27 @@ export class PaginationComponent implements OnInit {
 
   next() {
     this.pagination().page++;
-    if(this.pagination().page>this.pageLength()){
-      this.pagination().page =1;
+    if (this.pagination().page > this.pageLength()) {
+      this.pagination().page = 1;
     }
     this.goToNumberPage(this.pagination().page)
 
   }
 
+  showPage(ev: any) {
+
+    const value$ = new BehaviorSubject(ev.target.value);
+    value$.pipe(debounceTime(500))
+      .subscribe({
+        next: (res) => {
+
+          if (res > this.pagination().count.length || res === 0) {
+            res = 1;
+          }
+
+          this.goToNumberPage(res)
+
+        }
+      })
+  }
 }
