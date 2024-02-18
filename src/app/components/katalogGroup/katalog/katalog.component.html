@@ -8,22 +8,26 @@
                 <p>Search:</p>
                 <input autocomplete="off" type="text" [(ngModel)]="title">
             </div>
-            <div class="covrolins">
-                @for(covrolin of vewCovrolins(); track covrolin){
-                <app-covrolin [covrolin]="covrolin"></app-covrolin>
-                }
-            </div>
+            @if(isVisible()){
+                <div class="covrolins">
+                    @for(covrolin of vewCovrolins(); track covrolin){
+                    <app-covrolin [covrolin]="covrolin"></app-covrolin>
+                    }
+                </div>
+            } @else{
+                <p>page isn't found</p>
+            }
+          
 
             <div class="page">
                 <div class="size">
                     Всего {{ covrolins().length}} товара (-ов)
                 </div>
-                <app-pagination [covrolins]="covrolins" 
-                (covrolinsChange)="goToPage($event)"></app-pagination>
-                <!-- <div class="goToPage">
-                    <label>Перейти на страницу</label>
-                    <input class='page-input' type="text">
-                </div> -->
+                <app-pagination 
+                    [covrolins]="covrolins" 
+                    (covrolinsChange)="goToPage($event)"
+                    (visibleChange)="visibleChange($event)">
+                </app-pagination>
 
             </div>
         </div>

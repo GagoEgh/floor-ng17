@@ -1,4 +1,5 @@
 export interface IPagination {
   count: number[],
-  page: number
-  }
+  page: number,
+  isVisible:boolean
+}

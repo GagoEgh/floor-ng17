@@ -1,4 +1,5 @@
 <div class="block">
+
     <div class="pagination">
         <div class="left" (click)="previous()"></div>
         @for(page of pagination().count; track page; let i = $index){
@@ -8,8 +9,14 @@
         }
         <div class="right" (click)="next()"></div>
     </div>
+
+
     <div class="goToPage">
         <label>Перейти на страницу</label>
-        <input class='page-input' type="number"  (input)="showPage($event)">
+        <input class='page-input' type="number" [(ngModel)]="pagination().page"  (input)="getPage()">
     </div>
+
+
+
+
 </div>

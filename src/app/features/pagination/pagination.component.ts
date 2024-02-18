@@ -2,30 +2,34 @@ import { Component, EventEmitter, Input, OnInit, Output, Signal, WritableSignal,
 import { CommonModule } from '@angular/common';
 import { IPagination } from '../../types/pagination.interface';
 import { ICovrolin } from '../../types/covfolin.interface';
-import { BehaviorSubject, debounceTime } from 'rxjs';
+import { BehaviorSubject, debounceTime, distinctUntilChanged } from 'rxjs';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
   selector: 'app-pagination',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './pagination.component.html',
   styleUrl: './pagination.component.scss'
 })
 export class PaginationComponent implements OnInit {
-
   pagination: WritableSignal<IPagination> = signal({
     count: [],
-    page: 0
-  })
+    page: 1,
+    isVisible: true
+  });
+  private searchSubject = new BehaviorSubject<number>(this.pagination().page);
 
   ngOnInit(): void {
     this.pagination().count = new Array(this.pageLength());
-    this.goToNumberPage(1);
+    this.goToNumberPage(this.pagination().page);
+    this.showPage();
   }
 
   @Input({ required: true }) covrolins!: Signal<ICovrolin[] | undefined>;
-  @Output() covrolinsChange = new EventEmitter()
+  @Output() covrolinsChange = new EventEmitter();
+  @Output() visibleChange = new EventEmitter<boolean>();
 
   private pageLength(): number {
     return Math.ceil(this.covrolins()!.length / 10);
@@ -43,8 +47,6 @@ export class PaginationComponent implements OnInit {
     this.covrolinsChange.emit(vewCovrolins)
   }
 
-
-
   previous() {
     this.pagination().page--;
     if (this.pagination().page === 0) {
@@ -61,23 +63,32 @@ export class PaginationComponent implements OnInit {
       this.pagination().page = 1;
     }
     this.goToNumberPage(this.pagination().page)
-
   }
 
-  showPage(ev: any) {
+  getPage() {
+    this.searchSubject.next(this.pagination().page)
+  }
 
-    const value$ = new BehaviorSubject(ev.target.value);
-    value$.pipe(debounceTime(500))
-      .subscribe({
-        next: (res) => {
+  private showPage() {
+    this.searchSubject
+      .pipe(
+        distinctUntilChanged(),
+        debounceTime(300),
+      )
+      .subscribe((res: number) => {
+        this.isValidPage(res) ? this.updateIsVisible(false) :
+          (this.goToNumberPage(res), this.updateIsVisible(true));
+        this.visibleChange.emit(this.pagination().isVisible)
 
-          if (res > this.pagination().count.length || res === 0) {
-            res = 1;
-          }
-
-          this.goToNumberPage(res)
-
-        }
       })
   }
+
+  private updateIsVisible(bol: boolean) {
+    this.pagination.update((p: IPagination) => ({ ...this.pagination(), isVisible: bol }))
+  }
+
+  private isValidPage(value: number) {
+    return value > this.pagination().count.length || value === 0 || value === null
+  }
+
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Signal, inject } from '@angular/core';
+import { Component, OnInit, Signal, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ICovrolin } from '../../../types/covfolin.interface';
 import { MenuService } from '../../../apis/menu.service';
@@ -19,7 +19,8 @@ import { PaginationComponent } from '../../../features/pagination/pagination.com
 export class KatalogKovrolinComponent implements OnInit {
 
   covrolins!: Signal<ICovrolin[] | undefined>;
-  vewCovrolins!: Signal<ICovrolin[] | undefined>
+  vewCovrolins!: Signal<ICovrolin[] | undefined>;
+  isVisible = signal(true);
   menuService = inject(MenuService);
 
 
@@ -37,5 +38,8 @@ export class KatalogKovrolinComponent implements OnInit {
     this.vewCovrolins = ev;
   }
 
+  visibleChange(ev: boolean) {
+    this.isVisible.update((v: boolean) => v = ev)
+  }
 
 }
