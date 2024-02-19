@@ -5,7 +5,19 @@ import { BehaviorSubject, Observable, debounceTime, distinctUntilChanged } from 
     providedIn: 'root'
 })
 export class PaginationService {
-    constructor() { }
 
-   
+    private searchSubject = new BehaviorSubject<number>(1);
+
+    getPage(page: number) {
+        this.searchSubject.next(page);
+    }
+
+
+    showPage(): Observable<number> {
+        return this.searchSubject
+            .pipe(
+                distinctUntilChanged(),
+                debounceTime(300),
+            )
+    }
 }

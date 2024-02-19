@@ -1,9 +1,9 @@
-import { Component, EventEmitter, Input, OnInit, Output, Signal, WritableSignal, computed, signal } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, Signal, WritableSignal, computed, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IPagination } from '../../types/pagination.interface';
 import { ICovrolin } from '../../types/covfolin.interface';
-import { BehaviorSubject, debounceTime, distinctUntilChanged } from 'rxjs';
 import { FormsModule } from '@angular/forms';
+import { PaginationService } from '../pagination.service';
 
 
 @Component({
@@ -14,12 +14,13 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './pagination.component.scss'
 })
 export class PaginationComponent implements OnInit {
+
+  paginatonService = inject(PaginationService);
   pagination: WritableSignal<IPagination> = signal({
     count: [],
     page: 1,
     isVisible: true
   });
-  private searchSubject = new BehaviorSubject<number>(this.pagination().page);
 
   ngOnInit(): void {
     this.pagination().count = new Array(this.pageLength());
@@ -66,21 +67,18 @@ export class PaginationComponent implements OnInit {
   }
 
   getPage() {
-    this.searchSubject.next(this.pagination().page)
+    this.paginatonService.getPage(this.pagination().page)
   }
 
   private showPage() {
-    this.searchSubject
-      .pipe(
-        distinctUntilChanged(),
-        debounceTime(300),
-      )
+    this.paginatonService.showPage()
       .subscribe((res: number) => {
         this.isValidPage(res) ? this.updateIsVisible(false) :
           (this.goToNumberPage(res), this.updateIsVisible(true));
         this.visibleChange.emit(this.pagination().isVisible)
 
       })
+
   }
 
   private updateIsVisible(bol: boolean) {
