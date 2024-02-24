@@ -6,7 +6,8 @@
         <div class="katalog">
             <div class="search">
                 <p>Search:</p>
-                <input autocomplete="off" type="text" [(ngModel)]="title">
+                <input autocomplete="off"
+                type="text" [(ngModel)]="title" (input)="searchKovrolin()">
             </div>
             @if(isVisible()){
                 <div class="covrolins">

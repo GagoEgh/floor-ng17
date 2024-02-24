@@ -77,6 +77,7 @@ export class MenuService {
   }
 
   getCovrolinsSignal(){
+    
     return toSignal(this.store.pipe(select(covrolins)))
   }
 }

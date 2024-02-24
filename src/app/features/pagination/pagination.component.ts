@@ -1,4 +1,17 @@
-import { Component, EventEmitter, Input, OnInit, Output, Signal, WritableSignal, computed, inject, signal } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnChanges,
+  OnInit,
+  Output,
+  Signal,
+  SimpleChanges,
+  WritableSignal,
+  computed,
+  inject,
+  signal
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IPagination } from '../../types/pagination.interface';
 import { ICovrolin } from '../../types/covfolin.interface';
@@ -13,7 +26,7 @@ import { PaginationService } from '../pagination.service';
   templateUrl: './pagination.component.html',
   styleUrl: './pagination.component.scss'
 })
-export class PaginationComponent implements OnInit {
+export class PaginationComponent implements OnInit, OnChanges {
 
   paginatonService = inject(PaginationService);
   pagination: WritableSignal<IPagination> = signal({
@@ -22,15 +35,19 @@ export class PaginationComponent implements OnInit {
     isVisible: true
   });
 
+  @Input({ required: true }) covrolins!: Signal<ICovrolin[] | undefined>;
+  @Output() covrolinsChange = new EventEmitter();
+  @Output() visibleChange = new EventEmitter<boolean>();
+
   ngOnInit(): void {
-    this.pagination().count = new Array(this.pageLength());
+    // this.pagination().count = new Array(this.pageLength());
     this.goToNumberPage(this.pagination().page);
     this.showPage();
   }
 
-  @Input({ required: true }) covrolins!: Signal<ICovrolin[] | undefined>;
-  @Output() covrolinsChange = new EventEmitter();
-  @Output() visibleChange = new EventEmitter<boolean>();
+  ngOnChanges(changes: SimpleChanges): void {
+    this.pagination().count = new Array(this.pageLength());
+  }
 
   private pageLength(): number {
     return Math.ceil(this.covrolins()!.length / 10);
@@ -72,12 +89,13 @@ export class PaginationComponent implements OnInit {
 
   private showPage() {
     this.paginatonService.showPage()
-      .subscribe((res: number) => {
-        this.isValidPage(res) ? this.updateIsVisible(false) :
-          (this.goToNumberPage(res), this.updateIsVisible(true));
-        this.visibleChange.emit(this.pagination().isVisible)
+      .subscribe(
+        (res: number) => {
+          this.isValidPage(res) ? this.updateIsVisible(false) :
+            (this.goToNumberPage(res), this.updateIsVisible(true));
+          this.visibleChange.emit(this.pagination().isVisible)
 
-      })
+        })
 
   }
 
