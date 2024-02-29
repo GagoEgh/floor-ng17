@@ -12,14 +12,17 @@
   }
 
   .block {
-
     display: grid;
     grid-template-columns: repeat(2, 20% 80%);
     gap: 15px;
     margin-bottom: 30px;
 
     .bar {
-      border: 1px solid;
+      width: 300px;
+      background: #C68F4E0A;
+      position:relative;
+      left: -55px;
+      top:0;
     }
 
     .katalog {

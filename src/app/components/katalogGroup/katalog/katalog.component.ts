@@ -6,6 +6,7 @@ import { CovrolinComponent } from '../covrolin/covrolin.component';
 import { PaginationComponent } from '../../../features/pagination/pagination.component';
 import { FormsModule, } from '@angular/forms';
 import { Subject, debounceTime, distinctUntilChanged, map } from 'rxjs';
+import { CovrolinParametrComponent } from '../covrolin-parametr/covrolin-parametr.component';
 
 
 @Component({
@@ -15,7 +16,8 @@ import { Subject, debounceTime, distinctUntilChanged, map } from 'rxjs';
     CommonModule,
     CovrolinComponent,
     FormsModule,
-    PaginationComponent
+    PaginationComponent,
+    CovrolinParametrComponent
   ],
   templateUrl: './katalog.component.html',
   styleUrl: './katalog.component.scss'

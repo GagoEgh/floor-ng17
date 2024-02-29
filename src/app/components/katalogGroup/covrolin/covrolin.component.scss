@@ -10,7 +10,7 @@
         @include imgPosition(0,0.8);
 
         .eye {
-            @include imgStyle(0.7,$eye)
+            @include imgStyleCovrolin(0.7,$eye)
         }
 
         &:hover {
@@ -30,7 +30,7 @@
         @include imgPosition(86%,0.8);
 
         .star {
-            @include imgStyle(1,$star)
+            @include imgStyleCovrolin(1,$star)
         }
 
         &:hover {

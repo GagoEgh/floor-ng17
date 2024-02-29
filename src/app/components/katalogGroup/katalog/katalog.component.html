@@ -2,8 +2,9 @@
     <h1 class="title">Каталог ковролин</h1>
     <div class="block">
         <nav class="bar">
+            <app-covrolin-parametr></app-covrolin-parametr>
         </nav>
-        <div class="katalog">
+        <section class="katalog">
             <div class="search">
                 <p>Search:</p>
                 <input autocomplete="off"
@@ -18,24 +19,16 @@
             } @else{
                 <p>page isn't found</p>
             }
-          
-
             <div class="page">
                 <div class="size">
-                    Всего {{ covrolins().length}} товара (-ов)
+                    Всего {{ covrolins()?.length}} товара (-ов)
                 </div>
                 <app-pagination 
                     [covrolins]="covrolins" 
                     (covrolinsChange)="goToPage($event)"
                     (visibleChange)="visibleChange($event)">
                 </app-pagination>
-
             </div>
-        </div>
-
-
-
+        </section>
     </div>
-
-
 </div>
