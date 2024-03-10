@@ -13,5 +13,7 @@ export const saleTitleFooter = createSelector(baseFeatureSelector,(state:BaseTex
 export const news = createSelector(baseFeatureSelector,(state:BaseText)=>state.news);
 export const reviews = createSelector(baseFeatureSelector,(state:BaseText)=>state.reviews);
 export const covrolins = createSelector(baseFeatureSelector,(state:BaseText)=>state.covrolins);
+export const typeOfRoom = createSelector(baseFeatureSelector,(state:BaseText)=>state.typeOfRoom);
 
+export const covrolinColors = createSelector(baseFeatureSelector,(state:BaseText)=>state.covrolinColors);
 export const base = createSelector(baseFeatureSelector,(state:BaseText)=>state);

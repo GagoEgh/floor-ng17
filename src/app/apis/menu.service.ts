@@ -1,8 +1,30 @@
-import { Injectable, inject } from '@angular/core';
+import { Injectable, Signal, inject, signal } from '@angular/core';
 import { Store, select } from '@ngrx/store';
-import { covrolinsStart, floorTypeStart, menuActionStart, newsStart, reviewsStart, saleTitleFooterStart, saleTitleHeadStart } from '../store/action';
+import {
+  covrolinColorStart,
+  covrolinsStart,
+  floorTypeStart,
+  menuActionStart,
+  newsStart,
+  reviewsStart,
+  saleTitleFooterStart, saleTitleHeadStart, typeOfRoomStart
+} from '../store/action';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { covrolins, floorType, href, imgs, news, puyCards, reviews, saleTitleFooter, saleTitleHead, topMenu } from '../store/selectors';
+import {
+  covrolinColors,
+  covrolins,
+  floorType,
+  href,
+  imgs,
+  news,
+  puyCards,
+  reviews,
+  saleTitleFooter,
+  saleTitleHead, topMenu, typeOfRoom
+} from '../store/selectors';
+import { Observable, map } from 'rxjs';
+import { IRooms } from '../types/rooms.interface';
+
 
 
 @Injectable({
@@ -31,19 +53,31 @@ export class MenuService {
     this.store.dispatch(newsStart())
   }
 
-  reviewsDispatch(){
+  reviewsDispatch() {
     this.store.dispatch(reviewsStart())
   }
 
-  covrolinsDispatch(){
+  covrolinsDispatch() {
     this.store.dispatch(covrolinsStart())
   }
 
-  reviewsSignal(){
+  roomsDispatch() {
+    this.store.dispatch(typeOfRoomStart())
+  }
+
+  covrolinColorsDispatch() {
+    this.store.dispatch(covrolinColorStart())
+  }
+
+  covrolinColorSignal() {
+    return toSignal(this.store.pipe(select(covrolinColors)))
+  }
+
+  reviewsSignal() {
     return toSignal(this.store.pipe(select(reviews)))
   }
-  
-  newsSignal(){
+
+  newsSignal() {
     return toSignal(this.store.pipe(select(news)))
   }
 
@@ -76,8 +110,13 @@ export class MenuService {
     return toSignal(this.store.pipe(select(saleTitleFooter)))
   }
 
-  getCovrolinsSignal(){
-    
+  getCovrolinsSignal() {
     return toSignal(this.store.pipe(select(covrolins)))
   }
+
+
+  getTypeOfRoomsSignal():Signal<IRooms[] | undefined>{
+    return toSignal(this.store.pipe(select(typeOfRoom)))
+  }
+
 }

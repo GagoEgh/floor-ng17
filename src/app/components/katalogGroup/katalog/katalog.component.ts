@@ -7,6 +7,10 @@ import { PaginationComponent } from '../../../features/pagination/pagination.com
 import { FormsModule, } from '@angular/forms';
 import { Subject, debounceTime, distinctUntilChanged, map } from 'rxjs';
 import { CovrolinParametrComponent } from '../covrolin-parametr/covrolin-parametr.component';
+import { IParametrs } from '../../../types/paramters.interface';
+import { searchRooms } from '../../../features/searchRoomas.function';
+import { searchColor } from '../../../features/searchColor.function';
+import { searchSum } from '../../../features/searchSum.function';
 
 
 @Component({
@@ -70,6 +74,18 @@ export class KatalogKovrolinComponent implements OnInit {
 
       }),
       debounceTime(300)).subscribe()
+  }
+
+  covrolinsChange(event: IParametrs) {
+    let sum = searchSum(event, this.covrolins);
+    let colors = searchColor(event, this.covrolins);
+    let rooms = searchRooms(event, this.covrolins);
+
+    let b = [...colors, ...rooms, ...sum!];
+    let uniqe = signal([...new Set(b)]);
+    this.covrolins = uniqe;
+    this.vewCovrolins = uniqe;
+
   }
 
 }

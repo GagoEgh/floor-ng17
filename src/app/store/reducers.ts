@@ -13,7 +13,13 @@ import {
     reviewsError,
     covrolinsStart,
     covrolinsSucces,
-    covrolinsError
+    covrolinsError,
+    typeOfRoomStart,
+    typeOfRoomSucces,
+    typeOfRoomError,
+    covrolinColorStart,
+    covrolinColorSucces,
+    covrolinColorError
 } from './action';
 
 
@@ -27,7 +33,8 @@ const baseText: BaseText = {
     news: [],
     reviews: [],
     covrolins:[],
-
+    typeOfRoom:[],
+    covrolinColors:[],
     puyCards: ["/assets/imgs/footer/Visa__logo.png", "/assets/imgs/footer/Mastercard-logo.png", "/assets/imgs/footer/Mir-logo.png"],
     imgs: ["/assets/imgs/header/login.png", "/assets/imgs/header/star.png", "/assets/imgs/header/shopping.png"],
     topMenu: ['Ковролин', 'Ковровая плитка', 'Линолеум', 'Дизайн-плитка ПВХ',
@@ -64,4 +71,13 @@ export const baseReducer = createReducer(
     on(covrolinsStart, (state: BaseText) => ({ ...state })),
     on(covrolinsSucces, (state: BaseText, action) => ({ ...state, covrolins: action.covrolins })),
     on(covrolinsError, (state: BaseText) => ({ ...state })),
+
+    on(typeOfRoomStart, (state: BaseText) => ({ ...state })),
+    on(typeOfRoomSucces, (state: BaseText, action) => ({ ...state, typeOfRoom:action.typeOfRooms })),
+    on(typeOfRoomError, (state: BaseText) => ({ ...state })),
+
+    
+    on(covrolinColorStart, (state: BaseText) => ({ ...state })),
+    on(covrolinColorSucces, (state: BaseText, action) => ({ ...state, covrolinColors:action.covrolinColors })),
+    on(covrolinColorError, (state: BaseText) => ({ ...state })),
 )

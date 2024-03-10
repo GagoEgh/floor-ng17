@@ -1,7 +1,9 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable, inject } from "@angular/core";
-import { Observable, tap } from "rxjs";
+import { Observable} from "rxjs";
 import { INews } from "../types/news.interface";
+import { IApi } from "../types/api.interface";
+import { IRooms } from "../types/rooms.interface";
 
 @Injectable(
     { providedIn: 'root' }
@@ -17,23 +19,32 @@ export class GetJsonService {
         return this.http.get('assets/json/floorType.json')
     }
 
-    getSaleTitleHead(){
+    getSaleTitleHead() {
         return this.http.get('assets/json/saleTitleHeader.json')
     }
 
-    getSaleTitleFooter(){
+    getSaleTitleFooter() {
         return this.http.get('assets/json/saleTitleFooter.json')
     }
 
-    getNews():Observable<INews[]>{
+    getNews(): Observable<INews[]> {
         return this.http.get<INews[]>('assets/json/news.json')
     }
 
-    getReviews(){
+    getReviews() {
         return this.http.get('assets/json/reviews.json')
     }
 
-    getCovrolin(){
+    getCovrolin() {
         return this.http.get('assets/json/covrolins.json')
+    }
+
+
+    getTypeOfRoom(){
+        return this.http.get('assets/json/typeOfRoom.json')
+    }
+
+    getCovrolinColor(){
+        return this.http.get('assets/json/covrolinColor.json')
     }
 }

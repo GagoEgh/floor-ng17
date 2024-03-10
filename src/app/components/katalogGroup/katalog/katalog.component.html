@@ -2,8 +2,9 @@
     <h1 class="title">Каталог ковролин</h1>
     <div class="block">
         <nav class="bar">
-            <app-covrolin-parametr></app-covrolin-parametr>
+            <app-covrolin-parametr (parametrsEvent)="covrolinsChange($event)"></app-covrolin-parametr>
         </nav>
+
         <section class="katalog">
             <div class="search">
                 <p>Search:</p>

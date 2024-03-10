@@ -95,7 +95,7 @@
     height: 25px;
     align-self: center;
     cursor: pointer;
-    background-image:url($url)
+    background-image: url($url)
 }
 
 
@@ -120,12 +120,6 @@
         -webkit-appearance: none;
         -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
         border: none;
-        // border-radius: $input-border-radius;
-        // background: $input-bg-color;
-        // box-shadow: inset 0 1px 0 0 darken($input-bg-color, 15%),
-        //     inset 0 -1px 0 0 darken($input-bg-color, 10%);
-        // -webkit-box-shadow: inset 0 1px 0 0 darken($input-bg-color, 15%),
-        //     inset 0 -1px 0 0 darken($input-bg-color, 10%);
         overflow: hidden;
         left: 0;
         top: $input-top;
@@ -145,21 +139,6 @@
         width: $input-height;
         height: $input-height;
         border: none;
-        // border-radius: $input-border-radius;
-        // background-image: -webkit-gradient(linear,
-        //         left top,
-        //         left bottom,
-        //         color-stop(0%, lighten($input-thumb-color, 60%)),
-        //         color-stop(100%, $input-thumb-color));
-        /* android <= 2.2 */
-        // background-image: -webkit-linear-gradient(top,
-        //         lighten($input-thumb-color, 60%) 0,
-        //         $input-thumb-color 100%);
-        /* older mobile safari and android > 2.2 */
-        // background-image: linear-gradient(to bottom,
-        //         lighten($input-thumb-color, 60%) 0,
-        //         $input-thumb-color 100%);
-        /* W3C */
     }
 
     input[type="range"]::-moz-range-thumb {
@@ -174,7 +153,6 @@
         background-image: linear-gradient(to bottom,
                 lighten($input-thumb-color, 60%) 0,
                 $input-thumb-color 100%);
-        /* W3C */
     }
 
     input[type="range"]::-ms-thumb {

@@ -1,0 +1,122 @@
+[
+  {
+    "color": "#000000",
+    "isChecked": false,
+    "name": "Черный"
+  },
+  {
+    "color": "#979797",
+    "isChecked": false,
+    "name": "Темно-серый"
+  },
+  {
+    "color": "#D0D0D0",
+    "isChecked": false,
+    "name": "Серый"
+  },
+  {
+    "color": "#FFFFFF",
+    "isChecked": false,
+    "name": "Белый"
+  },
+  {
+    "color": "#EEE0B7",
+    "isChecked": false,
+    "name": "Бежевый"
+  },
+  {
+    "color": "#FFACC8",
+    "isChecked": false,
+    "name": "Розовый"
+  },
+  {
+    "color": "#FE1111",
+    "isChecked": false,
+    "name": "Красный"
+  },
+  {
+    "color": "#FE6F5F",
+    "isChecked": false,
+    "name": "Коралловый"
+  },
+  {
+    "color": "#C45824",
+    "isChecked": false,
+    "name": "Терракотовый"
+  },
+  {
+    "color": "#964B00",
+    "isChecked": false,
+    "name": "Коричневый"
+  },
+  {
+    "color": "#B00000",
+    "isChecked": false,
+    "name": "Бордовый"
+  },
+  {
+    "color": "#FF6800",
+    "isChecked": false,
+    "name": "Оранжевый"
+  },
+  {
+    "color": "#E83A08",
+    "isChecked": false,
+    "name": "Рыжий"
+  },
+  {
+    "color": "#F5FA15",
+    "isChecked": false,
+    "name": "Желтый"
+  },
+  {
+    "color": "#FFD700",
+    "isChecked": false,
+    "name": "Золотой"
+  },
+  {
+    "color": "#32AC35",
+    "isChecked": false,
+    "name": "Зеленый"
+  },
+  {
+    "color": "#61F42E",
+    "isChecked": false,
+    "name": "Салатовый"
+  },
+  {
+    "color": "#15D0FA",
+    "isChecked": false,
+    "name": "Голубой"
+  },
+  {
+    "color": "#332FF9",
+    "isChecked": false,
+    "name": "Синий"
+  },
+  {
+    "color": "#16228F",
+    "isChecked": false,
+    "name": "Темно-синий"
+  },
+  {
+    "color": "#A008E8",
+    "isChecked": false,
+    "name": "Фиолетовый"
+  },
+  {
+    "color": "#D948F0",
+    "isChecked": false,
+    "name": "Сиреневый"
+  },
+  {
+    "color": "#EA338B",
+    "isChecked": false,
+    "name": "Малиновый"
+  },
+  {
+    "color": "#30D5C8",
+    "isChecked": false,
+    "name": "Бирюзовый"
+  }
+]

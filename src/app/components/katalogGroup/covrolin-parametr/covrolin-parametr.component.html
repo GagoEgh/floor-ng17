@@ -9,44 +9,56 @@
                     class="range">
             </div>
 
-            <p>Price Range</p>
             <section class="range-slider" #range>
                 <span class="rangeValues"></span>
                 <input formControlName="rangeMin" [(value)]="this.parametrs.controls['rangeMin'].value" value="500"
-                    min="500" max="5000" step="500" type="range">
+                    min="400" max="80000" step="500" type="range">
                 <input formControlName="rangeMax" [(value)]="this.parametrs.controls['rangeMax'].value" value="5000"
-                    min="500" max="5000" step="500" type="range">
+                    min="400" max="80000" step="500" type="range">
             </section>
         </div>
         <div class="rooms" formArrayName="rooms">
-            <p class="title">Тип помещения ({{typeOfRoom.length}})</p>
-            <label class="room">
-                <input type="checkbox" checked="true">
-                Все категории
-            </label>
 
-            @for(room of getRoomsControls()["controls"]; track $index){
+            <span>
+                
+                <span class="title">
+                    Тип помещения ({{typeOfRoom().length-1}})
+                    <img class="arrow" 
+                     src="/assets/imgs/katalogGroup/covrolins/arrow_down.png">
+                </span>
 
-            <label class="room">
-                <input type="checkbox" formControlName='{{$index}}' >
-                {{typeOfRoom[$index]}}
-            </label>
-            }
+                <div class="rooms-block">
+                    @for(room of getRoomsControls()["controls"]; track $index){
+    
+                    <label class="room">
+                        <input type="checkbox" formControlName='{{$index}}'>
+                        {{typeOfRoom()[$index]?.name}}
+                    </label>
+                    }
+                </div>
+            </span>
         </div>
+        
+        <p class="title" >Цвет ({{covrolinColors()?.length}})</p>
         <div class="colors" formArrayName="colors">
+           
             @for(room of getColorsControls()["controls"]; track $index){
 
-                <div class="box" [style.backgroundColor]="colors[$index]?.color" (click)="checked($index)">
+                <div class="box" [style.backgroundColor]="covrolinColors()[$index]?.color" (click)="checked($index)">
                     <label class="room" [class.block]="!parametrs.controls['colors'].value[$index]" >
                         <input type="checkbox" formControlName='{{$index}}'  >
-                        <!-- {{typeOfRoom[$index]}} -->
                     </label>
+                    <span class="text">
+                        {{covrolinColors()[$index]?.name}}
+                    </span>
+                    
                 </div>
                
                 }
         </div>
 
-        <button>submit</button>
+        <button class="submit">Показать</button>
+        <button type="button" class="cansel" (click)="cansel()">Сбросить фильтр</button>
     </form>
 
 

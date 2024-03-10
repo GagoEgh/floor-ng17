@@ -52,27 +52,59 @@
             font-size: 12px;
             font-weight: 400;
             color: #666666;
+
             .title {
-                margin-bottom: 10px;
+                display: flex;
+                justify-content: space-between;
                 color: #202020;
                 font-size: 16px;
+
+                .arrow {
+                    width: 20px;
+                    height: 20px;
+                    align-self: center;
+                    cursor: pointer !important;
+                }
             }
 
-            .room {
-                margin-bottom: 10px;
+            .rooms-block {
+                display: flex;
+                flex-direction: column;
+
+                // transform: translate(0px, -900px);
+                .room {
+                    margin-bottom: 10px;
+
+                    // transform: translate(0px, -300px);
+                }
+
             }
+
         }
 
-        .colors{
+        .colors {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap:5px;
+            gap: 5px;
+            margin: 20px 0 40px 0;
+            // margin-top: 10px;
+            // margin-bottom: 20px;
 
-            .box{
+            .box {
                 width: 30px;
                 height: 30px;
                 cursor: pointer;
-                input[type="checkbox"]{
+                border: 1px solid rgb(235, 235, 235);
+                margin-bottom: 13px;
+
+                .text {
+                    display: block;
+                    font-size: 10px;
+                    color: #666666;
+                    margin-top: 15px;
+                }
+
+                input[type="checkbox"] {
                     margin-left: 10px;
                     scale: 80%;
                     transform: translate(-12%, 29%);
@@ -80,16 +112,28 @@
                     cursor: pointer;
                 }
 
-               
+
             }
         }
+
+        .submit {
+            @include flex-center(#FFF, $colorGold, 204px, 45px);
+            border: 1px solid $colorGold;
+            margin-bottom: 20px;
+        }
+
+        .cansel {
+            @include flex-center($colorGold, #FFF, 204px, 45px);
+            border: 1px solid $colorGold;
+        }
+
     }
 
 }
 
-.block{
+.block {
     // display: block;
-   opacity: 0;
+    opacity: 0;
 }
 
 input[type="checkbox"] {
@@ -123,4 +167,8 @@ input[type="checkbox"]:checked::before {
 
 section.range-slider {
     @include range-slider(280px, 100px, 50px, #f1efef, #413f41, left);
+}
+
+.title{
+    margin: 20px 0 10px 0;
 }

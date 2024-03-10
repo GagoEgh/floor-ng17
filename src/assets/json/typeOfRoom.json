@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Все категории",
+        "isChecked": false,
+        "id":"1"
+    },
+    {
+        "name": "Выставки",
+        "isChecked": false,
+        "id":"2"
+    },
+    {
+        "name": "Гостиницы",
+        "isChecked": false,
+        "id":"3"
+    },
+    {
+        "name": "Домой",
+        "isChecked": false,
+        "id":"4"
+    },
+    {
+        "name": "Кинотеатры и театры",
+        "isChecked": false,
+        "id":"5"
+    },
+    {
+        "name": "Образовательные, медицинские учреждения",
+        "isChecked": false,
+        "id":"6"
+    },
+    {
+        "name": "Офисы",
+        "isChecked": false,
+        "id":"7"
+    },
+    {
+        "name": "Рестораны, клубы",
+        "isChecked": false,
+        "id":"8"
+    },
+    {
+        "name": "Спортивные учреждения",
+        "isChecked": false,
+        "id":"9"
+    },
+    {
+        "name": "Торговые центры",
+        "isChecked": false,
+        "id":"10"
+    }
+]

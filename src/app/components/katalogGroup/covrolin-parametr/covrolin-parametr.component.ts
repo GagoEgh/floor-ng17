@@ -1,14 +1,30 @@
-import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {
+  Component,
+  EventEmitter,
+  OnInit,
+  Output,
+  Signal,
+  inject,
+  signal,
+} from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
   FormArray,
   FormsModule,
-  ReactiveFormsModule,
   Validators,
+  ReactiveFormsModule,
   FormControl
 } from '@angular/forms';
+import { IRooms } from '../../../types/rooms.interface';
+import { Store } from '@ngrx/store';
+import { MenuService } from '../../../apis/menu.service';
+import { ICovrolinColors } from '../../../types/covrolinColor.interface';
+import { IParametrs } from '../../../types/paramters.interface';
+
+
+
 
 @Component({
   selector: 'app-covrolin-parametr',
@@ -17,144 +33,40 @@ import {
   templateUrl: './covrolin-parametr.component.html',
   styleUrl: './covrolin-parametr.component.scss'
 })
-export class CovrolinParametrComponent implements OnInit {
+export class CovrolinParametrComponent {
+  menuService = inject(MenuService);
   parametrs!: FormGroup;
-  sum = '555';
-  typeOfRoom = [
-    'Выставки',
-    'Гостиницы',
-    'Домой',
-    'Кинотеатры и театры',
-    'Образовательные, медицинские учреждения',
-    'Офисы',
-    'Рестораны, клубы',
-    'Спортивные учреждения',
-    'Торговые центры'
-  ];
-
-  // colors = [
-  //   '#000000', '#979797', '#D0D0D0', '#FFFFFF', '#EEE0B7', '#FFACC8', '#FE1111',
-  //   '#FE6F5F', '#C45824', '#964B00', '#B00000', '#FF6800', '#E83A08', '#F5FA15',
-  //   '#FFD700', '#32AC35', '#61F42E', '#15D0FA', '#332FF9', '#16228F', '#A008E8',
-  //   '#D948F0', '#EA338B', '#30D5C8'
-  // ];
-
-  colors = [
-    {
-      color: '#000000',
-      isChecked: false
-    },
-    {
-      color: '#979797',
-      isChecked: false
-    },
-    {
-      color: '#D0D0D0',
-      isChecked: false
-    },
-    {
-      color: '#FFFFFF',
-      isChecked: false
-    },
-    {
-      color: '#EEE0B7',
-      isChecked: false
-    },
-    {
-      color: '#FFACC8',
-      isChecked: false
-    }, {
-      color: '#FE1111',
-      isChecked: false
-    },
-    {
-      color: '#FE6F5F',
-      isChecked: false
-    },
-    {
-      color: '#C45824',
-      isChecked: false
-    },
-    {
-      color: '#964B00',
-      isChecked: false
-    },
-    {
-      color: '#B00000',
-      isChecked: false
-    },
-    {
-      color: '#FF6800',
-      isChecked: false
-    },
-    {
-      color: '#E83A08',
-      isChecked: false
-    },
-    {
-      color: '#F5FA15',
-      isChecked: false
-    },
-    {
-      color: '#FFD700',
-      isChecked: false
-    },
-    {
-      color: '#32AC35',
-      isChecked: false
-    },
-    {
-      color: '#61F42E',
-      isChecked: false
-    },
-    {
-      color: '#15D0FA',
-      isChecked: false
-    },
-    {
-      color: '#332FF9',
-      isChecked: false
-    },
-    {
-      color: '#16228F',
-      isChecked: false
-    },
-    {
-      color: '#A008E8',
-      isChecked: false
-    },
-    {
-      color: '#D948F0',
-      isChecked: false
-    },
-    {
-      color: '#EA338B',
-      isChecked: false
-    },
-    {
-      color: '#30D5C8',
-      isChecked: false
-    },
-
-
-  ]
   fb = inject(FormBuilder);
+  typeOfRoom!: Signal<IRooms[] | undefined>;
+  covrolinColors!: Signal<ICovrolinColors[] | undefined>;
+  covrolinParameters!: IParametrs;
+
   constructor() {
-    this.initForm()
-  }
-  ngOnInit(): void {
-    this.addParametrs();
-    this.addColors()
+    this.menuService.roomsDispatch();
+    this.typeOfRoom = this.menuService.getTypeOfRoomsSignal();
+    this.menuService.covrolinColorsDispatch();
+    this.covrolinColors = this.menuService.covrolinColorSignal();
+
   }
 
+
+  @Output() parametrsEvent: EventEmitter<IParametrs> = new EventEmitter();
+
+  ngOnInit(): void {
+    this.initForm();
+    this.addParametrs();
+    this.roomsValueChange();
+    this.roomValueChange();
+    this.addColors();
+
+  }
 
   initForm() {
-
     this.parametrs = this.fb.group({
-      rangeMin: ['400', [Validators.required]],
-      rangeMax: ['5000', [Validators.required]],
+      rangeMin: ['400',],
+      rangeMax: ['80000',],
       rooms: new FormArray([
-        new FormControl(false, Validators.required)
+        new FormControl(false)
       ]),
       colors: new FormArray([
         new FormControl(false,)
@@ -162,16 +74,29 @@ export class CovrolinParametrComponent implements OnInit {
     })
   }
 
+  private roomsValueChange(): void {
+    (this.parametrs.get('rooms') as FormArray).controls[0].valueChanges
+      .subscribe({
+        next: (res: any) => {
+          (this.parametrs.get('rooms') as FormArray)
+            .controls.forEach((item, index) => {
+              if (index > 0) item.setValue(res)
+            })
 
-
-  getColorsControls(): FormArray {
-    return this.parametrs.controls["colors"] as FormArray
+        }
+      })
   }
 
-  addColors() {
-    this.colors.forEach((item) => {
-      (<FormArray>this.parametrs.controls["colors"]).push(new FormControl(false));
-    })
+  private roomValueChange(): void {
+    (this.parametrs.get('rooms') as FormArray).controls.forEach((item, index) => {
+      item.valueChanges.subscribe({
+        next: (res: boolean) => {
+          let t = JSON.parse(JSON.stringify(this.typeOfRoom()))
+          t![index].isChecked = res;
+          this.typeOfRoom = signal(t);
+        }
+      })
+    });
   }
 
   getRoomsControls(): FormArray {
@@ -179,26 +104,54 @@ export class CovrolinParametrComponent implements OnInit {
   }
 
   addParametrs() {
-    for (let i = 0; i < this.typeOfRoom.length; i++) {
+    for (let i = 0; i < this.typeOfRoom()!.length - 1; i++) {
       (<FormArray>this.parametrs.controls["rooms"]).push(new FormControl(false, Validators.required));
     }
   }
 
+  getColorsControls(): FormArray {
+    return this.parametrs.controls["colors"] as FormArray
+  }
+
+  addColors() {
+    for (let i = 0; i < this.covrolinColors()!.length - 1; i++) {
+      (<FormArray>this.parametrs.controls["colors"]).push(new FormControl(false));
+    }
+
+  }
+
   checked(index: number) {
-    (this.parametrs.get('colors') as FormArray).controls.forEach(item => {
+    (this.parametrs.get('colors') as FormArray)!.controls.forEach(item => {
       item.valueChanges.subscribe({
         next: (res) => {
-          this.colors[index].isChecked = res;
+          let c = JSON.parse(JSON.stringify(this.covrolinColors()));
+          c[index]!.isChecked! = res;
+          this.covrolinColors = signal(c);
         }
       })
     })
-
   }
 
   submit() {
+    let range = [this.parametrs.controls['rangeMin'].value, this.parametrs.controls['rangeMax'].value];
+    let covrolinColors = this.covrolinColors()!.filter(item => item.isChecked);
+    let rooms = this.typeOfRoom()!.filter(item => item.isChecked);
 
-    console.log(this.parametrs.controls["colors"])
+    this.covrolinParameters = {
+      range,
+      colors: covrolinColors,
+      rooms
+    }
+
+    this.parametrsEvent.emit(this.covrolinParameters)
   }
 
 
+  cansel() {
+    this.parametrs.reset()
+  }
 }
+
+
+
+
