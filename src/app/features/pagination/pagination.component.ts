@@ -62,9 +62,15 @@ export class PaginationComponent implements OnInit, OnChanges {
     let size = index * 10;
     let start = size - 10;
     let vewCovrolins = computed(() => this.covrolins()?.slice(start, size));
-    this.covrolinsChange.emit(vewCovrolins)
+    this.covrolinsChange.emit(vewCovrolins);
+    this.paginatonService.getPage(this.pagination().page)
+   
   }
 
+  
+  getPage() {
+    this.paginatonService.getPage(this.pagination().page)
+  }
   previous() {
     this.pagination().page--;
     if (this.pagination().page === 0) {
@@ -83,9 +89,6 @@ export class PaginationComponent implements OnInit, OnChanges {
     this.goToNumberPage(this.pagination().page)
   }
 
-  getPage() {
-    this.paginatonService.getPage(this.pagination().page)
-  }
 
   private showPage() {
     this.paginatonService.showPage()
@@ -103,7 +106,7 @@ export class PaginationComponent implements OnInit, OnChanges {
     this.pagination.update((p: IPagination) => ({ ...this.pagination(), isVisible: bol }))
   }
 
-  private isValidPage(value: number) {
+  private isValidPage(value: number):boolean {
     return value > this.pagination().count.length || value === 0 || value === null
   }
 
