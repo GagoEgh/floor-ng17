@@ -9,6 +9,7 @@ import { ICovrolin } from '../types/covfolin.interface';
 import { IApi } from '../types/api.interface';
 import { IRooms } from '../types/rooms.interface';
 import { ICovrolinColors } from '../types/covrolinColor.interface';
+import { IParametrs } from '../types/paramters.interface';
 
 export const menuActionStart = createAction(ActionType.MENU_START);
 export const menuActionSuccess = createAction(ActionType.MENU_SUCCESS, props<{ href: Href[] }>());

@@ -2,7 +2,7 @@ import { Signal } from "@angular/core";
 import { IParametrs } from "../types/paramters.interface";
 import { ICovrolin } from "../types/covfolin.interface";
 
-export function searchRooms(ev: IParametrs, covrolins: Signal<ICovrolin[] | undefined>) {
+export function searchRooms(ev: IParametrs, covrolins: Signal<ICovrolin[] | undefined>):ICovrolin[] {
     let rooms = []
     let roomsSize = ev.rooms!.length;
     let size = covrolins()?.length!;

@@ -24,6 +24,7 @@ import {
 } from '../store/selectors';
 import { Observable, map } from 'rxjs';
 import { IRooms } from '../types/rooms.interface';
+import { IParametrs } from '../types/paramters.interface';
 
 
 
