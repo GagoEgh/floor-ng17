@@ -1,0 +1,34 @@
+
+<span class="close" (click)="onNoClick()">X</span>
+<mat-dialog-content>
+    <h2 mat-dialog-title>Заказ обратного звонка</h2>
+    <form  [formGroup]="ordering" (ngSubmit)="submit()">
+
+
+        <div>
+            <mat-form-field>
+                <mat-label>Ваше имя</mat-label>
+
+                <input matInput required formControlName='name' placeholder="Алексей">
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field>
+                <mat-label>Телефон</mat-label>
+                <input matInput formControlName='phone' required placeholder="+ 7 (999) ___ __ __">
+            </mat-form-field>
+        </div>
+    </form>
+
+   
+    <label class="box">
+        <input type="checkbox">
+        Согласен с обработкой персональных данных
+    </label>
+    <button class="submit"  [mat-dialog-close]="ordering.value">Заказать обратный звонок</button>
+
+</mat-dialog-content>
+<mat-dialog-actions>
+
+</mat-dialog-actions>

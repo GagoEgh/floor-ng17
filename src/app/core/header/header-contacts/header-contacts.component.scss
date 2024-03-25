@@ -7,7 +7,7 @@
     }
 }
 .header{
-    @include flex(57px);
+    @include flex(80px);
     @media (max-width:800px){
         gap:10px
     }
@@ -22,6 +22,15 @@
         @media(max-width: 800px){
             width: 80px;
             height: 30px;
+        }
+    }
+
+
+    .router{
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        &:hover{
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         }
     }
 
@@ -66,6 +75,7 @@
             font-size: 16px;
             font-weight: 500;
             background-color: white;
+            cursor:  pointer !important;
             
             @media (max-width: 1441px){
                 padding:  9px 15px 8px 14px;
@@ -137,15 +147,18 @@
 
                 @media (max-width: 1025px){
                     @include location-font(10px,400);
+                  
                 }
 
                 @media (max-width: 865px){
                     @include location-font(8px,300);
+                 
                 }
             }
 
             .address-homeOpen{
                 @include location-font(14px,400);
+             
 
                 @media (max-width: 1441px){
                     @include location-font(14px,400);
@@ -161,6 +174,7 @@
 
                 @media (max-width: 865px){
                     @include location-font(8px,300);
+                    
                 }
             }
         }

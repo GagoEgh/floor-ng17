@@ -15,9 +15,11 @@
         }
 
         .company-title{
+            margin-top: 20px;
             font-size: 69px;
             text-align: right;
             width: 761px;
+            line-height: 70px;
 
             @media (max-width:1024px){
                 font-size: 50px;
@@ -27,6 +29,7 @@
             @media (max-width:769px){
                 font-size: 38px;
                 width: 379px;
+                line-height: 50px;
             }
 
             @media (max-width:490px){

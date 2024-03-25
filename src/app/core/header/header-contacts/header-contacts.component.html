@@ -1,6 +1,7 @@
 
 <div class="container header">
-    <a routerLink="/">
+
+    <a routerLink="/" class="router">
         <img src='{{logo}}' class="logo">
     </a>
     <div class="order">
@@ -8,7 +9,7 @@
             <img src='{{call}}' class="phone-call">
             <p class="phone-number">8(800) 775-10-92</p>
         </div>
-        <button class="order-call">Заказать обратный звонок</button>
+        <button class="order-call" mat-stroked-button  (click)="openDialog()">Заказать обратный звонок</button>
     </div>
     <div class="location">
         <img src='{{location}}' class="location-img">

@@ -1,5 +1,8 @@
 @import '../../../../assets/scss/mixins.scss';
 @import '../../../../assets/scss/variable.scss';
+@import '../../../../assets/scss/checkbox.mixins.scss';
+
+@include checkbox();
 
 .parametr {
     display: flex;
@@ -70,12 +73,8 @@
             .rooms-block {
                 display: flex;
                 flex-direction: column;
-
-                // transform: translate(0px, -900px);
                 .room {
                     margin-bottom: 10px;
-
-                    // transform: translate(0px, -300px);
                 }
 
             }
@@ -87,21 +86,18 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 5px;
             margin: 20px 0 40px 0;
-            // margin-top: 10px;
-            // margin-bottom: 20px;
-
             .box {
                 width: 30px;
                 height: 30px;
                 cursor: pointer;
                 border: 1px solid rgb(235, 235, 235);
-                margin-bottom: 13px;
+                margin-bottom: 35px;
 
                 .text {
                     display: block;
                     font-size: 10px;
                     color: #666666;
-                    margin-top: 15px;
+                    margin-top: 9px;
                 }
 
                 input[type="checkbox"] {
@@ -136,34 +132,6 @@
     opacity: 0;
 }
 
-input[type="checkbox"] {
-    appearance: none;
-    background-color: #fff;
-    margin: 0;
-    font: inherit;
-    color: currentColor;
-    width: 16px;
-    height: 14px;
-    border: 1px solid $colorGold;
-    display: inline-grid;
-    place-content: center;
-    transform: translateY(-0.075em);
-}
-
-input[type="checkbox"]::before {
-    content: "";
-    width: 7px;
-    height: 7px;
-    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-    transform: scale(0);
-    transition: 120ms transform ease-in-out;
-    box-shadow: inset 1em 1em var(--form-control-color);
-    background-color: $colorGold;
-}
-
-input[type="checkbox"]:checked::before {
-    transform: scale(1.5);
-}
 
 section.range-slider {
     @include range-slider(280px, 100px, 50px, #f1efef, #413f41, left);

@@ -5,6 +5,7 @@
     font-variant-numeric: lining-nums proportional-nums;
     font-size: $px;
     font-weight: $weight;
+    margin: 0;
 }
 
 @mixin flex($height) {
@@ -42,6 +43,7 @@
     font-weight: 500;
     color: $color;
     background: $bg;
+    cursor: pointer !important;
 }
 
 @mixin fontStyle($color, $size, $weight) {

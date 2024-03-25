@@ -16,6 +16,7 @@ import { ReviewsEffect } from './store/effect/reviews.effect';
 import { CovrolinsEffect } from './store/effect/covrolins.effect';
 import { RoomsEffect } from './store/effect/rooms.effect';
 import { CovrolinColorsEffect } from './store/effect/covrolinColors.effect';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 
 export const appConfig: ApplicationConfig = {
@@ -27,6 +28,7 @@ export const appConfig: ApplicationConfig = {
     provideEffects([
       HrefEffect, FloorTypeEffect,NewsEffect,ReviewsEffect,RoomsEffect,
       SaleTitleHeadEffect,SaleTitleFooterEffect,CovrolinsEffect,CovrolinColorsEffect]),
+      provideAnimationsAsync(),
 
   ]
 };
