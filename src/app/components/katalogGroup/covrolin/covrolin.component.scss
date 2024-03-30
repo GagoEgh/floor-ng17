@@ -1,16 +1,18 @@
 @import '../../../../assets/scss/mixins.scss';
 @import '../../../../assets/scss/variable.scss';
 
+
 .covrolin {
     position: relative;
-    width: 350px;
     height: 440px;
+    width: inherit;
+  
 
     .img-eye {
-        @include imgPosition(0,0.8);
+        @include imgPosition(0, 0.8);
 
         .eye {
-            @include imgStyleCovrolin(0.7,$eye)
+            @include imgStyleCovrolin(0.7, $eye)
         }
 
         &:hover {
@@ -27,10 +29,10 @@
     }
 
     .img-star {
-        @include imgPosition(86%,0.8);
+        @include imgPosition(86%, 0.8);
 
         .star {
-            @include imgStyleCovrolin(1,$star)
+            @include imgStyleCovrolin(1, $star)
         }
 
         &:hover {
@@ -48,7 +50,7 @@
 
     .covrolin-img {
         height: 205px;
-        width: 350px;
+        width: 100%;
     }
 
     .covrolin-about {

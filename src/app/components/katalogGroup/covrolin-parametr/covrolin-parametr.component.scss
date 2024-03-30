@@ -21,7 +21,7 @@
                 justify-content: space-between;
 
                 .range {
-                    width: 110px;
+                    width: 45%;
                     height: 25px;
                     border: 1px solid $colorGold;
                     opacity: 0.5px
@@ -134,7 +134,7 @@
 
 
 section.range-slider {
-    @include range-slider(280px, 100px, 50px, #f1efef, #413f41, left);
+    @include range-slider(98%, 100px, 50px, #f1efef, #413f41, left);
 }
 
 .title{

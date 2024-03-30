@@ -16,19 +16,18 @@
   .block {
     display: grid;
     grid-template-columns: repeat(2, 20% 80%);
-    gap: 15px;
     margin-bottom: 30px;
 
     .bar {
-      width: 300px;
+      width: 100%;
       background: #C68F4E0A;
-      position:relative;
+      position: relative;
       left: -55px;
-      top:0;
+      top: 0;
     }
 
     .katalog {
-
+      width: inherit;
       .search {
         display: flex;
         margin-bottom: 60px;
@@ -44,19 +43,18 @@
 
       .covrolins {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 105px 25px;
-
+        grid-template-columns: repeat(3, 31%);
+        gap: 105px 36px;
       }
 
       .page {
-        margin-top: 20px;
+        margin-top: 140px;
         display: flex;
         justify-content: space-between;
 
-     
-    
-        .size{
+
+
+        .size {
           font-size: 16px;
           font-weight: 500;
           color: #666666;
