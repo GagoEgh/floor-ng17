@@ -56,6 +56,9 @@
             font-weight: 400;
             color: #666666;
 
+            @media screen and (max-width:769px) {
+                font-size: 10px;
+            }
             .title {
                 display: flex;
                 justify-content: space-between;
@@ -86,6 +89,10 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 5px;
             margin: 20px 0 40px 0;
+
+            @media screen and (max-width:769px){
+                grid-template-columns: repeat(2, 1fr);
+            }
             .box {
                 width: 30px;
                 height: 30px;
@@ -98,6 +105,10 @@
                     font-size: 10px;
                     color: #666666;
                     margin-top: 9px;
+
+                    @media screen and (max-width:769px){
+                        font-size: 8px;
+                    }
                 }
 
                 input[type="checkbox"] {
@@ -116,11 +127,26 @@
             @include flex-center(#FFF, $colorGold, 204px, 45px);
             border: 1px solid $colorGold;
             margin-bottom: 20px;
+            @media screen and (max-width:1025px){
+                width: 160px;
+            }
+
+            @media screen and (max-width:769px){
+                @include parameterBtn(0px);
+            }
         }
 
         .cansel {
             @include flex-center($colorGold, #FFF, 204px, 45px);
             border: 1px solid $colorGold;
+
+            @media screen and (max-width:1025px){
+                width: 160px;
+            }
+
+            @media screen and (max-width:769px){
+                @include parameterBtn(10px);
+            }
         }
 
     }

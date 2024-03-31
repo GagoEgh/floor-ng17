@@ -83,11 +83,11 @@
     top: 21%;
 }
 
-@mixin imgPosition($left, $opacity) {
+@mixin imgPosition($left, $opacity,$width) {
     position: absolute;
     left: $left;
-    width: 48px;
-    height: 48px;
+    width: $width;
+    height: 40px;
     background: #C68F4E;
     opacity: $opacity;
 }
@@ -100,7 +100,12 @@
     background-image: url($url)
 }
 
-
+@mixin parameterBtn($mg){
+    width: 90px;
+    height: 35px;
+    font-size: 12px;
+    margin: $mg auto;
+}
 
 @mixin range-slider($width,
     $height,

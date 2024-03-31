@@ -9,7 +9,10 @@
   
 
     .img-eye {
-        @include imgPosition(0, 0.8);
+        @include imgPosition(0, 0.8,48px);
+        @media screen and (max-width:1024px){
+            @include imgPosition(0, 0.8,35px);
+        }
 
         .eye {
             @include imgStyleCovrolin(0.7, $eye)
@@ -29,7 +32,10 @@
     }
 
     .img-star {
-        @include imgPosition(86%, 0.8);
+        @include imgPosition(86%, 0.8,48px);
+        @media screen and (max-width:1024px){
+            @include imgPosition(84%, 0.8,35px);
+        }
 
         .star {
             @include imgStyleCovrolin(1, $star)
@@ -51,6 +57,9 @@
     .covrolin-img {
         height: 205px;
         width: 100%;
+        @media screen and (max-width:1025px) {
+            height: 180px;
+        }
     }
 
     .covrolin-about {
@@ -58,6 +67,11 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+        
+        @media screen and (max-width:1025px) {
+            gap: 0;
+            font-size: 14px;
+        }
 
         .covrolin-block {
             display: flex;
@@ -67,6 +81,10 @@
                 color: #666;
                 font-size: 16px;
                 font-weight: 500;
+
+                @media screen and (max-width:1025px) {
+                    font-size: 12px;
+                }
             }
 
             .flag {
@@ -78,6 +96,9 @@
                 color: var(--Gold, #C68F4E);
                 font-size: 20px;
                 font-weight: 500;
+                @media screen and (max-width:1025px) {
+                    font-size: 16px;
+                }
             }
         }
 
@@ -85,6 +106,10 @@
             color: #202020;
             font-size: 18px;
             font-weight: 600;
+            @media screen and (max-width:1025px) {
+                font-size: 13px;
+                margin: 7px 0;
+            }
         }
 
         .sel-btns {
@@ -94,6 +119,7 @@
 
             @media(max-width:1024px) {
                 gap: 25px;
+                margin-top: 0;
             }
 
             @media (max-width:426px) {
@@ -106,29 +132,43 @@
                 gap: 8px
             }
 
-            .back {
+            .order {
                 @include flex-center($colorGold, #F6F6F6, 204px, 45px);
                 border: 1px solid $colorGold;
 
                 @media(max-width:1024px) {
-                    @include flex-center($colorGold, #F6F6F6, 150px, 45px);
+                    @include flex-center($colorGold, #F6F6F6, 150px, 30px);
+                    font-size: 12px;
+                    p{
+                        margin: 0;
+                    }
                 }
 
-                .back-img {
+                @media(max-width:426px) {
+                    font-size: 10px;
+                }
+                .order-img {
                     width: 5.632px;
                     height: 11.997px;
                 }
 
+                
                 font-size: 16px
             }
 
-            .next {
+            .shopping-cart {
                 @include flex-center(#FFF, $colorGold, 204px, 45px);
-
                 @media(max-width:1024px) {
-                    @include flex-center(#FFF, $colorGold, 150px, 45px);
+                    @include flex-center(#FFF, $colorGold, 150px, 30px);
+                    font-size: 12px;
+                    p{
+                        margin: 0;
+                    }
                 }
 
+                @media(max-width:426px) {
+                    font-size: 10px;
+                }
                 font-size: 16px
             }
         }

@@ -11,6 +11,15 @@
     line-height: 87.675px;
     margin: 20px 0 20px -56px;
 
+    @media screen and (max-width:1025px) {
+      margin: 20px 0 20px -40px;
+    }
+
+    @media screen and (max-width:426px) {
+      margin: 0px 0 0px -17px;
+      font-size: 30px;
+    }
+
   }
 
   .block {
@@ -24,20 +33,44 @@
       position: relative;
       left: -55px;
       top: 0;
+
+      @media screen and (max-width:1025px) {
+        left: -40px;
+      }
+
+      @media screen and (max-width:1025px) {
+        left: -25px;
+        font-size: 10px;
+      }
+
+      @media screen and (max-width:1025px) {
+        left: -10px;
+        width: 125px;
+      }
     }
 
     .katalog {
       width: inherit;
+
       .search {
         display: flex;
         margin-bottom: 60px;
         align-items: center;
+        @media screen and (max-width:426px) {
+          margin-bottom: 20px;
+          justify-content: end;
+        }
 
         input {
           margin-left: 10px;
           width: 242px;
           height: 40px;
           padding-left: 5px;
+
+          @media screen and (max-width:426px) {
+            height: 30px;
+            width: 180px;
+          }
         }
       }
 
@@ -45,6 +78,19 @@
         display: grid;
         grid-template-columns: repeat(3, 31%);
         gap: 105px 36px;
+
+        @media screen and (max-width:1025px) {
+          gap: 20px 36px;
+        }
+
+        @media screen and (max-width:769px) {
+          grid-template-columns: repeat(2, 45%);
+        }
+
+        @media screen and (max-width:426px) {
+          grid-template-columns: repeat(1, 70%);
+          justify-content: end;
+        }
       }
 
       .page {
