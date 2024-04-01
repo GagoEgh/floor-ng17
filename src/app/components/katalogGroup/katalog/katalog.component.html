@@ -1,7 +1,10 @@
 <div class="container">
     <h1 class="title">Каталог ковролин</h1>
+    <div class="filter" (click)="showBar()">
+        <p>Фильтры</p>
+    </div>
     <div class="block">
-        <nav class="bar">
+        <nav class="bar" [class.show]="isBar">
             <app-covrolin-parametr (parametrsEvent)="covrolinsChange($event)"></app-covrolin-parametr>
         </nav>
 

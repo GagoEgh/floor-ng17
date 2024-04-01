@@ -88,4 +88,9 @@ export class KatalogKovrolinComponent implements OnInit {
 
   }
 
+  isBar = false;
+  showBar() {
+    this.isBar = !this.isBar
+    console.log("jjjj", this.isBar)
+  }
 }

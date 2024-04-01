@@ -3,6 +3,18 @@
 
 .container {
 
+  .filter{
+    display: none;
+    @media screen and (max-width:426px) {
+      @include flex-center($colorGold, #F6F6F6, 150px, 30px);
+      border: 1px solid $colorGold;
+      font-size:12px ;
+      p{
+        margin: 0;
+      }
+    }
+  }
+
   .title {
     color: var(--heading-color, #202020);
     font-family: Raleway;
@@ -26,7 +38,11 @@
     display: grid;
     grid-template-columns: repeat(2, 20% 80%);
     margin-bottom: 30px;
+    @media screen and (max-width:426px) {
+      display: block;
+    }
 
+  
     .bar {
       width: 100%;
       background: #C68F4E0A;
@@ -38,15 +54,18 @@
         left: -40px;
       }
 
-      @media screen and (max-width:1025px) {
+      @media screen and (max-width:769px) {
         left: -25px;
         font-size: 10px;
       }
 
-      @media screen and (max-width:1025px) {
-        left: -10px;
-        width: 125px;
+      @media screen and (max-width:426px) {
+        // display: none;
       }
+    }
+
+    .show{
+      display: none;
     }
 
     .katalog {
@@ -87,10 +106,7 @@
           grid-template-columns: repeat(2, 45%);
         }
 
-        @media screen and (max-width:426px) {
-          grid-template-columns: repeat(1, 70%);
-          justify-content: end;
-        }
+       
       }
 
       .page {
@@ -98,7 +114,9 @@
         display: flex;
         justify-content: space-between;
 
-
+        @media screen and (max-width:426px) {
+          margin-top: 40px;
+        }
 
         .size {
           font-size: 16px;

@@ -6,12 +6,16 @@
     position: relative;
     height: 440px;
     width: inherit;
-  
+
+    @media screen and (max-width:426px) {
+        margin-top: 35px;
+    }
 
     .img-eye {
-        @include imgPosition(0, 0.8,48px);
-        @media screen and (max-width:1024px){
-            @include imgPosition(0, 0.8,35px);
+        @include imgPosition(0, 0.8, 48px);
+
+        @media screen and (max-width:1024px) {
+            @include imgPosition(0, 0.8, 35px);
         }
 
         .eye {
@@ -32,9 +36,14 @@
     }
 
     .img-star {
-        @include imgPosition(86%, 0.8,48px);
-        @media screen and (max-width:1024px){
-            @include imgPosition(84%, 0.8,35px);
+        @include imgPosition(86%, 0.8, 48px);
+
+        @media screen and (max-width:1024px) {
+            @include imgPosition(84%, 0.8, 35px);
+        }
+
+        @media screen and (max-width:769px) {
+            @include imgPosition(80%, 0.8, 35px);
         }
 
         .star {
@@ -57,6 +66,7 @@
     .covrolin-img {
         height: 205px;
         width: 100%;
+
         @media screen and (max-width:1025px) {
             height: 180px;
         }
@@ -67,7 +77,7 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        
+
         @media screen and (max-width:1025px) {
             gap: 0;
             font-size: 14px;
@@ -96,6 +106,7 @@
                 color: var(--Gold, #C68F4E);
                 font-size: 20px;
                 font-weight: 500;
+
                 @media screen and (max-width:1025px) {
                     font-size: 16px;
                 }
@@ -106,6 +117,7 @@
             color: #202020;
             font-size: 18px;
             font-weight: 600;
+
             @media screen and (max-width:1025px) {
                 font-size: 13px;
                 margin: 7px 0;
@@ -126,6 +138,9 @@
                 position: relative;
                 left: 0;
                 top: 495px;
+                gap: 7px;
+                flex-direction: column;
+                align-items: center;
             }
 
             @media (max-width:376px) {
@@ -139,29 +154,33 @@
                 @media(max-width:1024px) {
                     @include flex-center($colorGold, #F6F6F6, 150px, 30px);
                     font-size: 12px;
-                    p{
+
+                    p {
                         margin: 0;
                     }
                 }
 
                 @media(max-width:426px) {
                     font-size: 10px;
+                    text-align: center;
                 }
+
                 .order-img {
                     width: 5.632px;
                     height: 11.997px;
                 }
 
-                
                 font-size: 16px
             }
 
             .shopping-cart {
                 @include flex-center(#FFF, $colorGold, 204px, 45px);
+
                 @media(max-width:1024px) {
                     @include flex-center(#FFF, $colorGold, 150px, 30px);
                     font-size: 12px;
-                    p{
+
+                    p {
                         margin: 0;
                     }
                 }
@@ -169,6 +188,7 @@
                 @media(max-width:426px) {
                     font-size: 10px;
                 }
+
                 font-size: 16px
             }
         }
