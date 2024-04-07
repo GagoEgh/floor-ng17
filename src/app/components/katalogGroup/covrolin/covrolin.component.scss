@@ -8,6 +8,7 @@
     width: inherit;
 
     @media screen and (max-width:426px) {
+       
         margin-top: 35px;
     }
 
@@ -45,7 +46,9 @@
         @media screen and (max-width:769px) {
             @include imgPosition(80%, 0.8, 35px);
         }
-
+        @media screen and (max-width:426px) {
+            @include imgPosition(91%, 0.8, 35px);
+        }
         .star {
             @include imgStyleCovrolin(1, $star)
         }
@@ -135,7 +138,7 @@
             }
 
             @media (max-width:426px) {
-                position: relative;
+                // position: relative;
                 left: 0;
                 top: 495px;
                 gap: 7px;

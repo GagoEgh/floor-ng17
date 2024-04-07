@@ -1,10 +1,13 @@
-import { Component, OnInit, Signal, inject, signal, EnvironmentInjector } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {
+  Component, OnInit, Signal, ChangeDetectorRef,
+  inject, signal, EnvironmentInjector
+} from '@angular/core';
+import { CommonModule, NgClass } from '@angular/common';
 import { ICovrolin } from '../../../types/covfolin.interface';
 import { MenuService } from '../../../apis/menu.service';
 import { CovrolinComponent } from '../covrolin/covrolin.component';
 import { PaginationComponent } from '../../../features/pagination/pagination.component';
-import { FormsModule, } from '@angular/forms';
+import { FormsModule, NgModel, ReactiveFormsModule, } from '@angular/forms';
 import { Subject, debounceTime, distinctUntilChanged, map } from 'rxjs';
 import { CovrolinParametrComponent } from '../covrolin-parametr/covrolin-parametr.component';
 import { IParametrs } from '../../../types/paramters.interface';
@@ -20,8 +23,10 @@ import { searchSum } from '../../../features/searchSum.function';
     CommonModule,
     CovrolinComponent,
     FormsModule,
+    ReactiveFormsModule,
     PaginationComponent,
-    CovrolinParametrComponent
+    CovrolinParametrComponent,
+    NgClass
   ],
   templateUrl: './katalog.component.html',
   styleUrl: './katalog.component.scss'
@@ -35,6 +40,7 @@ export class KatalogKovrolinComponent implements OnInit {
   search$ = new Subject<string>();
 
   private injector = inject(EnvironmentInjector);
+
   private menuService = inject(MenuService);
 
   constructor() {
@@ -89,8 +95,25 @@ export class KatalogKovrolinComponent implements OnInit {
   }
 
   isBar = false;
+
+  getClass() {
+    return {
+      'show': this.isBar,
+      'bar': !this.isBar
+    }
+  }
+
+  getKatalogClass() {
+    return {
+      'katalogTop': this.isBar,
+      'katalog': !this.isBar
+    }
+  }
+
+
   showBar() {
     this.isBar = !this.isBar
-    console.log("jjjj", this.isBar)
   }
+
+
 }

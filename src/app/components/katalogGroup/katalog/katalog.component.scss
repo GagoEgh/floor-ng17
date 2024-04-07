@@ -3,13 +3,15 @@
 
 .container {
 
-  .filter{
+  .filter {
     display: none;
+
     @media screen and (max-width:426px) {
       @include flex-center($colorGold, #F6F6F6, 150px, 30px);
       border: 1px solid $colorGold;
-      font-size:12px ;
-      p{
+      font-size: 12px;
+
+      p {
         margin: 0;
       }
     }
@@ -35,20 +37,24 @@
   }
 
   .block {
+
     display: grid;
     grid-template-columns: repeat(2, 20% 80%);
     margin-bottom: 30px;
+
     @media screen and (max-width:426px) {
+      // position: absolute;
       display: block;
     }
 
-  
+
     .bar {
       width: 100%;
       background: #C68F4E0A;
       position: relative;
       left: -55px;
       top: 0;
+
 
       @media screen and (max-width:1025px) {
         left: -40px;
@@ -60,22 +66,36 @@
       }
 
       @media screen and (max-width:426px) {
-        // display: none;
+        animation: widthOpen 1s linear;
+        // left: -25px;
       }
     }
 
-    .show{
-      display: none;
+    .show {
+      position: relative;
+      animation: widthClose 1s linear;
+      left: -105%;
+    }
+
+    .katalogTop {
+      @media screen and (max-width:426px) {
+        animation: top 1s linear;
+        width: inherit;
+        margin-top: -383%;
+      }
     }
 
     .katalog {
       width: inherit;
+      animation: bottom 1s linear;
 
       .search {
         display: flex;
         margin-bottom: 60px;
         align-items: center;
+
         @media screen and (max-width:426px) {
+          // margin-top: -383%;
           margin-bottom: 20px;
           justify-content: end;
         }
@@ -106,7 +126,7 @@
           grid-template-columns: repeat(2, 45%);
         }
 
-       
+
       }
 
       .page {
@@ -126,5 +146,67 @@
 
       }
     }
+  }
+}
+
+
+@keyframes widthOpen {
+  from {
+    left: -105%;
+  }
+
+  50% {
+
+    left: -50%;
+  }
+
+  100% {
+    left: 5%;
+  }
+}
+
+@keyframes widthClose {
+  from {
+
+    left: -5%;
+  }
+
+  50% {
+    left: -50%;
+  }
+
+  to {
+    left: -105%;
+  }
+}
+
+
+@keyframes top {
+  from {
+
+    margin-top: 0;
+  }
+
+  50% {
+    margin-top: -200%;
+  }
+
+  to {
+    margin-top: -383%;
+  }
+}
+
+@keyframes bottom{
+  from {
+
+    margin-top: -383%;
+  }
+
+  50% {
+    margin-top: -200%;
+  }
+
+  to {
+    margin-top: 0;
   }
 }

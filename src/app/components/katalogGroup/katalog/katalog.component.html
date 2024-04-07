@@ -4,11 +4,12 @@
         <p>Фильтры</p>
     </div>
     <div class="block">
-        <nav class="bar" [class.show]="isBar">
+        <!--{'show':isBar,'bar':!isBar}-->
+        <nav [ngClass]="getClass()">
             <app-covrolin-parametr (parametrsEvent)="covrolinsChange($event)"></app-covrolin-parametr>
         </nav>
-
-        <section class="katalog">
+<!-- getKatalogClass()  class="katalog"-->
+        <section [ngClass]="getKatalogClass()" >
             <div class="search">
                 <p>Search:</p>
                 <input autocomplete="off"
