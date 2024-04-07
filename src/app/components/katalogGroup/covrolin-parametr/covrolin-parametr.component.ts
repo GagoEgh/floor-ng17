@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import {
   Component,
   EventEmitter,
-  OnInit,
   Output,
   Signal,
   inject,
@@ -18,7 +17,6 @@ import {
   FormControl
 } from '@angular/forms';
 import { IRooms } from '../../../types/rooms.interface';
-import { Store } from '@ngrx/store';
 import { MenuService } from '../../../apis/menu.service';
 import { ICovrolinColors } from '../../../types/covrolinColor.interface';
 import { IParametrs } from '../../../types/paramters.interface';
@@ -51,6 +49,7 @@ export class CovrolinParametrComponent {
 
 
   @Output() parametrsEvent: EventEmitter<IParametrs> = new EventEmitter();
+  @Output()changeEvent:EventEmitter<boolean> = new EventEmitter()
 
   ngOnInit(): void {
     this.initForm();
@@ -148,7 +147,11 @@ export class CovrolinParametrComponent {
 
 
   cansel() {
-    this.parametrs.reset()
+    this.parametrs.reset();
+    this.parametrs.get('rangeMin')?.setValue('400');
+    this.parametrs.get('rangeMax')?.setValue('80000');
+
+    this.changeEvent.emit(true)
   }
 }
 

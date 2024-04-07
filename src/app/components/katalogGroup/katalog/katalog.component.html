@@ -4,11 +4,13 @@
         <p>Фильтры</p>
     </div>
     <div class="block">
-        <!--{'show':isBar,'bar':!isBar}-->
         <nav [ngClass]="getClass()">
-            <app-covrolin-parametr (parametrsEvent)="covrolinsChange($event)"></app-covrolin-parametr>
+            <app-covrolin-parametr 
+            (changeEvent)="cancelValidator($event)"
+            (parametrsEvent)="covrolinsChange($event)">
+
+            </app-covrolin-parametr>
         </nav>
-<!-- getKatalogClass()  class="katalog"-->
         <section [ngClass]="getKatalogClass()" >
             <div class="search">
                 <p>Search:</p>

@@ -1,5 +1,5 @@
 import {
-  Component, OnInit, Signal, ChangeDetectorRef,
+  Component, OnInit, Signal,
   inject, signal, EnvironmentInjector
 } from '@angular/core';
 import { CommonModule, NgClass } from '@angular/common';
@@ -7,7 +7,7 @@ import { ICovrolin } from '../../../types/covfolin.interface';
 import { MenuService } from '../../../apis/menu.service';
 import { CovrolinComponent } from '../covrolin/covrolin.component';
 import { PaginationComponent } from '../../../features/pagination/pagination.component';
-import { FormsModule, NgModel, ReactiveFormsModule, } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule, } from '@angular/forms';
 import { Subject, debounceTime, distinctUntilChanged, map } from 'rxjs';
 import { CovrolinParametrComponent } from '../covrolin-parametr/covrolin-parametr.component';
 import { IParametrs } from '../../../types/paramters.interface';
@@ -34,13 +34,13 @@ import { searchSum } from '../../../features/searchSum.function';
 export class KatalogKovrolinComponent implements OnInit {
 
   title = '';
+  isBar = false;
   covrolins!: Signal<ICovrolin[] | undefined>;
   vewCovrolins!: Signal<ICovrolin[] | undefined>;
   isVisible = signal(true);
   search$ = new Subject<string>();
 
   private injector = inject(EnvironmentInjector);
-
   private menuService = inject(MenuService);
 
   constructor() {
@@ -65,6 +65,13 @@ export class KatalogKovrolinComponent implements OnInit {
     this.isVisible.update((v: boolean) => v = ev)
   }
 
+  private injectCovrolin() {
+    this.injector.runInContext(() => (
+      this.menuService.covrolinsDispatch(),
+      this.covrolins = this.menuService.getCovrolinsSignal()));
+    this.vewCovrolins = this.covrolins
+  }
+
   private searcCovrolins() {
     this.search$.pipe(
       distinctUntilChanged((previous, current) => previous === current),
@@ -72,9 +79,7 @@ export class KatalogKovrolinComponent implements OnInit {
         this.covrolins = signal(this.covrolins()?.filter((covrolin: ICovrolin) => covrolin.collection.startsWith(res.toUpperCase())))
         this.vewCovrolins = this.covrolins;
         if (res === '') {
-          this.injector.runInContext(() => (this.menuService.covrolinsDispatch(),
-            this.covrolins = this.menuService.getCovrolinsSignal()));
-          this.vewCovrolins = this.covrolins
+          this.injectCovrolin();
         }
         return this.covrolins()
 
@@ -93,8 +98,6 @@ export class KatalogKovrolinComponent implements OnInit {
     this.vewCovrolins = uniqe;
 
   }
-
-  isBar = false;
 
   getClass() {
     return {
@@ -115,5 +118,10 @@ export class KatalogKovrolinComponent implements OnInit {
     this.isBar = !this.isBar
   }
 
+  cancelValidator(ev: boolean) {
+    if (ev) {
+      this.injectCovrolin()
+    }
+  }
 
 }
